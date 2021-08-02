@@ -1,0 +1,42 @@
+<ngu-carousel #myCarousel class="catouselcontainer"[inputs]="carouselBanner" [dataSource]="[first, second, third]" (onMove)="onmoveFn($event)">
+  <!--<button NguCarouselPrev class='leftRs'>&lt;</button>-->
+
+  <div *nguCarouselDef="let item;" class="item">
+    <div class="tile">
+      <ng-container *ngTemplateOutlet="item"></ng-container>
+    </div>
+    
+  </div>
+<ng-template #first>
+    <section class="section intro fp-section fp-table active fp-completely" data-anchor="Home" style="height: 498px; background-color: rgb(255, 255, 255);">
+    	<div class="fp-tableCell">
+			<img src="assets/image/home_finger.gif">
+    		<!--<div class="container">
+    			<div class="region region-introduction banner">
+    				<div id="block-block-23" class="block block-block">
+    					<div class="content">
+    						<div class="banner-content"><h1 class="banner-heading">Digital <span>innovation</span></h1><span class="start-here"><a are="" href="#Who-We-Are" we="">Let’s Explore Possibilities</a></span><p class="banner-caption home-banner-caption">Building Cohesive Technology Solutions across<br>Web, Mobile, Cloud, loT and Blockchain - for the World’s Leading Enterprises, SMEs &amp; Startups</p></div></div></div></div><div class="region region-client client-banner client-counts"><div id="block-custom-neosoft-clientele-banner-block" class="block block-custom-neosoft"><div class="content"><div class="client-banner"><div class="client-counts clearfix"><h2>1500+<span>Happy Clients</span></h2><div class="client-carousel owl-theme clearfix owl-carousel owl-loaded"><div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3817.34px;"><div class="owl-item active" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/ddecor.png" alt=""></div></div><div class="owl-item active" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/mahindra.png" alt=""></div></div><div class="owl-item active" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/sharekhan.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/sbi-mutual-fund.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/icici.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/EY.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/GEP.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/australian-olympic.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/etisalat.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/virgin-mobile.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/b2x.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/ebay.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/vodafone.png" alt=""></div></div><div class="owl-item" style="width: 272.667px; margin-right: 0px;"><div><img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/home-page-clients/JTI.png" alt=""></div></div></div></div><div class="owl-controls"><div class="owl-nav"><div class="owl-prev" style=""><i class="icon icon-left-open-big"></i></div><div class="owl-next" style=""><i class="icon icon-right-open-big"></i></div></div><div class="owl-dots" style=""><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div></div></div></div></div></div></div></div> 
+    					-->
+		</div>
+
+		<div class="fp-tableCell" >
+          <img src="assets/bg/background-transparent-yellowblue.png">
+		</div>
+		<div class="fp-tableCell" >
+          <img src="assets/bg/background-transparent-matrixs.jpg">
+		</div>
+  	</section>
+  </ng-template>
+
+  <ng-template #second>
+    <p>Secondasfsfasfs</p>
+  </ng-template>
+
+  <ng-template #third>
+    <p>Thirdasfasfaf</p>
+  </ng-template>
+  <!--<button NguCarouselNext class='rightRs'>&gt;</button>-->
+  <ul class="myPoint" NguCarouselPoint>
+		<li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+	</ul>
+</ngu-carousel>

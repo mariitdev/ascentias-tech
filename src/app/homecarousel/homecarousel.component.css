@@ -1,0 +1,113 @@
+.bannerStyle h1 {
+        background-color: #ccc;
+        min-height: 300px;
+        text-align: center;
+        line-height: 300px;
+      }
+      .leftRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.3);
+        border-radius: 999px;
+        left: 0;
+      }
+
+      .rightRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.3);
+        border-radius: 999px;
+        right: 0;
+      }
+
+      .ngucarouselPoint {
+        list-style-type: none;
+        text-align: center;
+        padding: 12px;
+        margin: 0;
+        white-space: nowrap;
+        overflow: auto;
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        left: 0;
+        box-sizing: border-box;
+      }
+      .ngucarouselPoint li {
+        display: inline-block;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.55);
+        padding: 5px;
+        margin: 0 3px;
+        transition: 0.4s ease all;
+      }
+      .ngucarouselPoint li.active {
+        background: white;
+        width: 10px;
+      }
+      .catouselcontainer{
+        padding-top:70px;
+      }
+      .myPoint {
+  list-style-type: none;
+  text-align: center;
+  padding: 12px;
+  margin: auto;
+        bottom: 0;
+  white-space: nowrap;
+  overflow: auto;
+  box-sizing: border-box;
+    display: grid;
+    position: absolute;
+        right: 0;
+
+    margin: 0px 0px 225px 0px;
+    /*margin: -268px 0px 0px 0px;*/
+}
+.myPoint  li {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.55);
+    padding: 4px;
+    margin: 3px 3px;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: 0.4s;
+}
+.myPoint  li.active {
+      background: #6b6b6b;
+      transform: scale(1.2);
+    }
+.navMenu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: flex;
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      &.active {
+        background: goldenrod;
+      }
+      background: #ccc;
+      border-radius: 6px;
+    }
+    margin: 3px;
+  }
+}
+.fp-tableCell img{
+  
+    background-size: cover;
+    height: 87vh;
+    width: 100%;
+}

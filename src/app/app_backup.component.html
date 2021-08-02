@@ -1,0 +1,2026 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar_head {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #f76060;;
+    color: white;
+    font-weight: 600;
+  }
+
+  /*.toolbar {
+    height: 35px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }*/
+
+  /*.toolbar img {
+    margin: 7px 67px;
+  }*/
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover {
+    opacity: 0.8;
+  }
+  .toolbar_head img {
+    margin: 0 16px;
+  }
+
+  .toolbar_head #twitter-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar_head #twitter-logo:hover {
+    opacity: 0.8;
+  }
+  .content {
+    display: flex;
+    margin: 32px auto;
+    padding: 0 16px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  .card svg.material-icons path {
+    fill: #888;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: rgb(105, 103, 103);
+  }
+
+  .card.highlight-card {
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    min-width: 30%;
+    position: relative;
+  }
+
+  .card.card.highlight-card span {
+    margin-left: 60px;
+  }
+
+  svg#rocket {
+    width: 80px;
+    position: absolute;
+    left: -10px;
+    top: -24px;
+  }
+
+  svg#rocket-smoke {
+    height: 100vh;
+    position: absolute;
+    top: 10px;
+    right: 180px;
+    z-index: -10;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+  .terminal {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 6px;
+    padding-top: 45px;
+    margin-top: 8px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+  }
+
+  .terminal::before {
+    content: "\2022 \2022 \2022";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: rgb(58, 58, 58);
+    color: #c2c3c4;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 14px 0;
+    text-indent: 4px;
+  }
+
+  .terminal pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    color: white;
+    padding: 0 1rem 1rem;
+    margin: 0;
+  }
+
+  .circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+  }
+
+  .circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    height: 100%;
+    max-width: 1004px;
+    width: 100%;
+    margin: auto;
+   /* height: calc(100% - 87px);*/
+    position: relative;
+  }
+  header {
+    position: fixed;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 9%;
+    max-height: 90px;
+  }
+  header .top-bar{
+    z-index: 2!important;
+  }
+  header .top-bar {
+    background-color: #0048aa;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    /*height: 35%;*/
+    min-height: 31px;
+}
+.blue_background_lang{
+    background-color: #0048aa;
+    color: #ffffff;;
+}
+.grey_background_lang{
+    background-color: #e5e5e5;
+    color: #2d2d2d;
+}
+.left-info{
+    width: 45%;
+    float: left;
+}
+.contact-info{
+    width: 45%;
+}
+  header .top-bar ul{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      height: 100%;
+  }
+  ul{
+      list-style: none;
+  }
+  header .left-info li {
+    padding: 0.25rem 0;
+    width: 60px;
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    vertical-align: middle;
+    float: left;
+  }
+  header .top-bar li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    height: 100%;
+  }
+  header .top-bar .language .icon {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .top-bar .language .sortdescicon{
+    vertical-align: text-top;
+  }
+  header .top-bar .language .sortascicon{
+    vertical-align: bottom;
+  }
+  header .contact-info {
+    float: right;
+    font-size: 0.9rem;
+    padding: 0.38rem 0;
+  }
+  header .top-bar .search, header .top-bar .account {
+    width: 40px;
+    text-align: center;
+  }
+  ul li {
+    list-style: none;
+  }
+  header .contact-info .career a {
+    background: #ffffff;
+    border-color: #ffffff;
+    margin-right: 1rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 1rem;
+    line-height: 1.6rem;
+    border-radius: 2rem;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  header .contact-info .contact a {
+    border: 1px solid #ffbc46;
+    padding: 0.2rem 1rem;
+    color: #000000;
+    border-radius: 2rem;
+    line-height: 1.6rem;
+    font-size: 0.6rem;
+    background-color: #ffbc46;
+  }
+  header .contact-info .country {
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+  header .contact-info .country .country-list {
+    vertical-align: middle;
+    padding-top: 1px;
+  }
+  header .contact-info .country .flag {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    background-image: url(/assets/image/icons-india-25.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 0.1rem;
+  }
+  span.in.flag {
+      background-image: url(/assets/image/icons-india-25.png) !important;
+  }
+  header .contact-info .country .phone-no {
+      position: relative;
+      padding-right: 1rem;
+      color: #fff;
+  }
+  span.phone-no {
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .left-info li:hover {
+    color: #ea6b6b;
+  }
+  /*.main-header {
+    width: 100%;
+    background: #fff;
+    padding: 0.8rem 0;
+    position: relative;
+    z-index: -1;
+    height: 40px;
+  }*/
+  h2.ascentias.vertical-align-middle {
+    -webkit-transform: translateY(-36%);
+    transform: translateY(-36%);
+  }
+  .vertical-align-middle {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+  }
+  a {
+      text-decoration: none;
+      outline: 0;
+      max-width: 100%;
+      color: #2d2d2d;
+      cursor: pointer !important;
+  }
+  .main-header .ascentias span {
+      display: none;
+  }
+  .main-header .header-nav.desk {
+      display: inline-block;
+      vertical-align: middle;
+      margin: -15px 0px 0px 0px;
+      width: 70%;
+      text-align: center;
+  }
+  .menu-icon1, .close-icon {
+      display: none;
+  }
+  /*.main-header .header-nav.desk .top-links {
+      margin-bottom: 0;
+  }
+  ul, ol {
+      margin: 0 0 20px 0;
+      list-style-position: inside;
+  }*/
+  /*.main-header .header-nav.desk li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.5rem;
+      position: relative;
+      background-image: url(/assets/image/menu-downarrow.svg);
+      background-repeat: no-repeat;
+      background-position: 94% 12px;
+      padding-right: 18px;
+      background-size: 1.5em;
+      cursor: pointer;
+      padding: 0.3rem 2rem 0.3rem 1.5rem;
+  }*/
+  .hidewhoweare, .hidewhatwedo, .hideweworkwith, .hidetechnologies{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.5rem;
+      position: relative;
+      background-image: url(/assets/image/menu-downarrow.svg);
+      background-repeat: no-repeat;
+      background-position: 94% 12px;
+      padding-right: 18px;
+      background-size: 1.5em;
+      cursor: pointer;
+      padding: 0.3rem 2rem 0.3rem 1.5rem;
+  }
+  .showwhoweare, .showwhatwedo, .showweworkwith, .showtechnologies{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.5rem;
+      position: relative;
+      background-image: url(/assets/image/menu-uparrow.png);
+      background-repeat: no-repeat;
+      background-position: 94% -26px;
+      padding-right: 18px;
+      background-size: 1.5em;
+      cursor: pointer;
+      padding: 0.3rem 2rem 0.3rem 1.5rem;
+      background-color: #e5e5e5;
+      border-radius: 22px;
+  }
+  .main-header .header-nav.desk li a {
+      color: #000000;
+      position: relative;
+  }
+  .main-header{
+      border-bottom: 1px solid #e5e5e5;
+  }
+  .main-header {
+      width: 100%;
+      background: #fff;
+      padding: 0.8rem 0;
+      position: relative;
+      z-index: -1;
+      height: 75%;
+      min-height: 39px;
+  }
+
+  .main-header .ascentias {
+      display: inline-block;
+      vertical-align: middle;
+      margin: -12px 0px 0px 0px;
+      width: 17%;
+  }
+  .vertical-align-middle {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+  }
+  .main-header .ascentias img {
+      height: 33px;
+      width: auto;
+      margin: 11px 0px 4px 71px;
+  }
+  .main-header .menu-main {
+      display: inline-block;
+      vertical-align: middle;
+      width: 18%;
+      float: right;
+      position: relative;
+  }
+  .main-header .menu-main .menu {
+      display: inline-block;
+      vertical-align: middle;
+      display: none;
+      margin-top: 0.7rem;
+  }
+  .main-header .menu-main .menu a {
+      color: #b7b7b7;
+  }
+  .other-drop.active {
+    padding: 47px 0px 17px 0px;
+  }
+  .other-drop.active {
+      top: 0px;
+  }
+  .other-drop {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+  }
+  .other-drop {
+  border-bottom: 1px solid #e5e5e5;
+  }
+  .other-drop {
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    background: #e5e5e5;
+    color: #2d2d2d;
+    z-index: 1;
+    width: 100%;
+    padding: 2rem 0;
+    -moz-box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    border-color: rgba(0,0,0,0.1);
+}
+.lang-drop ul {
+    margin: 0;
+}
+.lang-drop ul li:first-child {
+    font-size: 1.3rem;
+}
+.lang-drop ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+.lang-drop ul li.active a {
+    color: #e23434;
+}
+.about-submenu.dropcontent.active {
+    padding-top: 2.5rem;
+}
+.menu-dropdown.active, .about-submenu.active, .tech-submenu.active, .what-we-do-submenu.active, .we-work-with-submenu.active {
+    top: 100%;
+    display: block;
+    min-height: 390px;
+    height: 100vh;
+    color: #d5d5d5;
+}
+.animation, .wrapper .page-content-main .content-navigation li, .floating-icons .main-menu-contact-drop, .floating-icons .main-menu-share-drop, #fullpage .what-we-do .what-left .more-arrow, #fullpage .intro .client-banner .client-carousel .owl-item > div, .clientel, a, .material-ui label, .material-ui input, header .top-bar .language .icon, .menu-dropdown, .about-submenu, .tech-submenu, .what-we-do-submenu, .we-work-with-submenu, .other-drop, .top-client-slider .owl-item, .global-customers-slider .owl-item {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.about-submenu, .tech-submenu, .what-we-do-submenu, .we-work-with-submenu {
+    width: 100%;
+    position: absolute;
+    background: #0a2b4c;
+    padding: 1rem 1rem 3rem;
+    top: -400px;
+    z-index: -2;
+    display: none;
+    background-image: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/dropdown-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom 13% center;
+}
+.about-submenu.dropcontent.active ul, .what-we-do-submenu.dropcontent.active ul, .we-work-with-submenu.dropcontent.active ul, .tech-submenu.dropcontent.active ul {
+    padding-top: 1rem;
+    width: 100%;
+}
+ul.clearfix.about-parent-dropdown {
+    padding-top: 0 !important;
+}
+li.about-submenu-content:first-child {
+    width: 45%;
+}
+li.about-submenu-content, li.what-we-do-submenu-content, li.we-work-with-submenu-content {
+    /*width: 32%;*/
+    float: left;
+    min-height: auto;
+    /*margin-right: 2%;*/
+}
+li.what-we-do-submenu-content:first-child{
+  width: 25%;
+  margin-right: 3%;
+}
+.what-we-do-submenu.dropcontent.active .dropdown-title{
+  padding-top: 25px;
+}
+li.what-we-do-submenu-content:last-child{
+  width: 72%;
+}
+.what-we-do-submenu.dropcontent.active .dropdown-title, .tech-submenu.dropcontent.active .dropdown-title, .we-work-with-submenu.dropcontent.active .dropdown-title, .about-submenu.dropcontent.active .dropdown-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    /*font-size: 1.6rem;*/*
+}
+/*.about-submenu.dropcontent.active ul, .what-we-do-submenu.dropcontent.active ul, .we-work-with-submenu.dropcontent.active ul, .tech-submenu.dropcontent.active ul {
+    padding-top: 1rem;
+    height: 100%;
+}*/
+ul.company-submenu, ul.what-we-do-links, ul.we-work-with-links {
+    width: 100%;
+}
+li.about-submenu-content ul li, li.what-we-do-submenu-content ul li, li.we-work-with-submenu-content ul li {
+    padding: 0.2rem 0;
+}
+
+li.about-submenu-content ul li p, li.what-we-do-submenu-content ul li p, li.we-work-with-submenu-content ul li p {
+    font-size: 0.8rem;
+}
+ul.company-submenu li, ul.what-we-do-links li, ul.we-work-with-links li {
+    padding: 0.2rem 0;
+    line-height: 1.5rem;
+}
+ul.company-submenu li, ul.what-we-do-links li, ul.we-work-with-links li, ul.techdropdown-submenu li {
+    width: 45%;
+    float: left;
+    border: 2px solid #a09b9b;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 0rem !important;
+    height: 55px;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 0.8rem;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    position: relative;
+    cursor: pointer;
+}
+.techdropdown-submenuparent{
+  width: 15% !important;
+  margin-right: 1% !important;
+  margin-bottom: 1% !important;
+}
+.techdropdown-submenuchild{
+  width: 23% !important;
+  margin-right: 1% !important;
+  margin-bottom: 1% !important;
+}
+ul, ol {
+    margin: 0 0 20px 0;
+    list-style-position: inside;
+}
+ul.company-submenu li a, ul.what-we-do-links li a, ul.we-work-with-links li a, ul.techdropdown-submenu li a {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 0.8rem;
+}
+ul.company-submenu li a:hover, ul.what-we-do-links li a:hover, ul.we-work-with-links li a:hover {
+    color: #e23434;
+}
+li.about-submenu-content a, li.what-we-do-submenu-content a, li.we-work-with-submenu-content a {
+    color: #d5d5d5;
+}
+li.about-submenu-content ul li i, li.what-we-do-submenu-content ul li i, .techdropdown-submenu li i, .we-work-with-links li i {
+    font-size: 3rem;
+    color: #e23434;
+    min-width: 65px;
+}
+li.about-submenu-content ul li i, li.what-we-do-submenu-content ul li i, li.we-work-with-submenu-content ul li i {
+    padding-right: 1rem;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+li.about-submenu-content:nth-child(2) {
+    width: 20%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.what-we-do-submenu.dropcontent.active .dropdown-title:after, .tech-submenu.dropcontent.active .dropdown-title:after, .we-work-with-submenu.dropcontent.active .dropdown-title:after, .about-submenu.dropcontent.active .dropdown-title:after {
+    height: 2px;
+    width: 5rem;
+    background: #e23434;
+    content: "";
+    display: block;
+    margin-top: 0.5rem;
+} 
+ul.company-submenu li:before, ul.company-submenu li:after, ul.what-we-do-links li:before, ul.what-we-do-links li:after, ul.we-work-with-links li:before, ul.we-work-with-links li:after, ul.techdropdown-submenu li:before, ul.techdropdown-submenu li:after {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+ul.company-submenu li::before, ul.what-we-do-links li:before, ul.we-work-with-links li:before, ul.techdropdown-submenu li:before {
+    border-bottom: 1px solid #e23434;
+    border-left: 1px solid #e23434;
+    -webkit-transform-origin: 0 100%;
+}
+ul.company-submenu li::after, ul.what-we-do-links li:after, ul.we-work-with-links li:after, ul.techdropdown-submenu li:after {
+    border-top: 1px solid #e23434;
+    border-right: 1px solid #e23434;
+    -webkit-transform-origin: 100% 0%;
+}
+ul.company-submenu li:before, ul.company-submenu li:after, ul.what-we-do-links li:before, ul.what-we-do-links li:after, ul.we-work-with-links li:before, ul.we-work-with-links li:after, ul.techdropdown-submenu li:before, ul.techdropdown-submenu li:after {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.what-we-do-submenu.dropcontent.active h3, .tech-submenu.dropcontent.active h3, .we-work-with-submenu.dropcontent.active h3, .about-submenu.dropcontent.active h3 {
+    color: #d5d5d5;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+p {
+    margin: 0 0 1rem 0;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+li.about-submenu-content .contents p span{
+    font-size: 0.8rem !important;
+}
+li.about-submenu-content:last-child {
+    width: 25%;
+    border-left: 1px solid #2d2d2d;
+    height: 326px;
+}
+li.about-submenu-content:last-child {
+    padding-left: 4%;
+}
+li.about-submenu-content:last-child, li.what-we-do-submenu-content:last-child, li.we-work-with-submenu-content:last-child {
+    margin-right: 0;
+    border-right: 0;
+}
+.main-header .header-nav.desk li.active a:after {
+    width: 50%;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #0a2b4c;
+}
+.main-header .header-nav.desk li a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition: width 0.5s ease,background-color 0.5s ease;
+    transition: width 0.5s ease,background-color 0.5s ease;
+    position: absolute;
+    bottom: -30px;
+    left: calc(50% - 5px);
+}
+ ul{
+    display: block !important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    padding-inline-start: 0px !important;
+}
+a.vision-mission-btn {
+    background: #f5a820;
+    padding: 5px;
+    box-sizing: border-box;
+    min-width: 100%;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    border-radius: 28px;
+    text-transform: uppercase;
+    color: #212223 !important;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    -webkit-appearance: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+a.vision-mission-btn:hover {
+    background: #ffffff;
+    color: #212223 !important;
+}
+li.about-submenu-content:last-child a.opening-btn {
+    text-transform: inherit !important;
+}
+li.about-submenu-content:last-child a.opening-btn {
+    border-bottom: none;
+    background: #e23434;
+    padding: 8px;
+    box-sizing: border-box;
+    margin: 0.8rem auto 1rem;
+    min-width: 100%;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    border-radius: 28px;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    -webkit-appearance: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+li.about-submenu-content:last-child a.opening-btn:hover {
+    background: #ffffff;
+    color: #212223 !important;
+}
+.info-div {
+    background: #f5a820;
+    padding: 1rem;
+    color: #212223;
+    position: relative;
+    height: 122px;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.info-div h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.8rem;
+    font-family: revert !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0.8rem !important;
+    color: #212223 !important;
+    font-weight: bold !important;
+}
+.info-div h3 span {
+    font-weight: 400;
+}
+.info-div .more-arrow {
+    border-radius: 100%;
+    background: #212223;
+    cursor: pointer;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    right: 0.8rem;
+    z-index: 0;
+    bottom: 0.8rem;
+    text-align: center;
+    color: #f5a820;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.info-div .more-arrow i{
+  font-size: 30px;
+}
+.info-div .more-arrow:hover {
+    background: #e23434;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.sb-container {
+    position: relative;
+    overflow: hidden;
+    padding-right: 10px;
+}
+.menu-scroll-grid {
+    height: 370px;
+    max-width: 100%;
+    width: 100%;
+}
+.menu-scroll-grid .sb-scrollbar-container {
+    background: transparent !important;
+}
+.menu-scroll-grid .sb-scrollbar-container {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    top: 6px;
+    width: 3px;
+    background: #333;
+    border-radius: 10px;
+}
+.menu-scroll-grid .sb-scrollbar {
+    position: absolute;
+    right: 0;
+    height: 200px !important;
+    width: 3px;
+    border-radius: 10px;
+    background: #e23434;
+}
+.menu-scroll-grid .sb-content {
+    height: auto !important;
+}
+.menu-scroll-grid .sb-content {
+    height: 100%;
+    max-height: 500px !important;
+    width: 116%;
+    padding-right: 15%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+ul.what-we-do-links {
+  padding-top: 0.5rem !important;
+}
+ul.what-we-do-links li {
+    width: 23%!important;
+    /*font-size: 1rem!important;*/
+}
+li.what-we-do-submenu-content ul li i.icon {
+    min-width: 45px !important;
+}
+li.what-we-do-submenu-content ul li i.icon img {
+    max-width: 35px !important;
+}
+ul.company-submenu li:hover, ul.what-we-do-links li:hover, ul.we-work-with-links li:hover, ul.techdropdown-submenu li:hover {
+    border: solid 1px #e23434;
+}
+ul.company-submenu li:hover, ul.what-we-do-links li:hover, ul.we-work-with-links li:hover, ul.techdropdown-submenu li:hover {
+    border: solid 2px #e23434;
+}
+.we-work-with-submenu.dropcontent.active .dropdown-title {
+    padding-top: 25px;
+}
+.we-work-with-submenu.dropcontent.active ul {
+    height: 20%;
+    width: 100%;
+}
+ul.we-work-with-links li {
+    width: 23.5%;
+}
+.we-work-with-links li i {
+    padding-right: 1.5rem;
+    vertical-align: middle;
+}
+.techdropdown-submenu li i{
+  padding: 0px;
+  margin: 0px -15px 0px 0px;
+}
+ul.we-work-with-links li a span, ul.techdropdown-submenu li a span {
+  color: #ffffff;
+}
+ul.techdropdown-submenu{
+  padding-top: 2px;
+}
+.dropdown-industries-list li {
+    width: 15%;
+    float: left;
+    border: 1px solid #a09b9b;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    padding: 0rem !important;
+    height: 90px;
+    text-align: center;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.dropdown-industries-list li::before {
+    border-bottom: 1px solid #e23434;
+    border-left: 1px solid #e23434;
+    -webkit-transform-origin: 0 100%;
+}
+.dropdown-industries-list li:before, .dropdown-industries-list li:after {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.dropdown-industries-list li a {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.8rem;
+    flex-direction: column;
+    z-index: 1;
+}
+.dropdown-industries-list li span {
+    line-height: 11px;
+    bottom: 14px!important;
+}
+.dropdown-industries-list li span {
+    display: block;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 0.2rem;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.dropdown-industries-list li::after {
+    border-top: 1px solid #e23434;
+    border-right: 1px solid #e23434;
+    -webkit-transform-origin: 100% 0%;
+}
+.dropdown-industries-list li:before, .dropdown-industries-list li:after {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.we-work-with-submenu-content h3{
+  padding-top: 0px !important;
+}
+.tech-submenu.dropcontent.active .dropdown-title {
+    padding-top: 25px;
+}
+.techdropdownfirstchild{
+    width: 100%;
+    height: 200px;
+}
+/*
+.main-header .menu-main .year-comp {
+    display: inline-block;
+    vertical-align: middle;
+    color: #ffffff;
+}
+ .main-header .menu-main .year-comp .cmmi, .main-header .menu-main .year-comp .exp {
+    border: 1px solid #e5e5e5;
+}
+.main-header .menu-main .year-comp .cmmi {
+    background: #2d2d2d;
+    position: absolute;
+    right: 90px;
+    top: -0.8rem;
+    height: 5.5rem;
+    padding: 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    width: 6rem;
+    border-color: rgba(255,255,255,0.5);
+    border-top: 0 !important;
+}
+.main-header .menu-main .year-comp .count {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.main-header .menu-main .year-comp .exp {
+    width: 6rem;
+    background: #e23434;
+    position: absolute;
+    right: 0;
+    top: -0.8rem;
+    height: 5.5rem;
+    padding: 0.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 0.8rem;
+    text-align: center;
+    border-color: rgba(255,255,255,0.5);
+    border-top: 0 !important;
+}
+.main-header .menu-main .year-comp-mobile {
+    display: none;
+}*/
+  .content {
+    background-image: url('/assets/image/home_finger.gif');
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+  }
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+</style>
+
+<!-- Toolbar -->
+
+<div class="toolbar" role="banner">
+  <!--<a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+    
+    <svg id="twitter-logo" height="24" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: none;
+          }
+
+          .cls-2 {
+            fill: #ffffff;
+          }
+        </style>
+      </defs>
+      <rect class="cls-1" width="400" height="400" />
+      <path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"
+      />
+    </svg>
+    
+  </a>-->
+  <header>
+  <section class="top-bar">
+  <div class="container">
+    <ul class="left-info clearfix">
+      <li class="language drop" (click) = togglelanguage() [ngClass]="isShowlang ? 'blue_background_lang' : 'grey_background_lang'"> 
+        <i class="fa fa-globe" ></i>
+        <span class="lang"> EN </span>
+        <i [ngClass]="isShowlang ? 'fa fa-sort-desc sortdescicon' : 'fa fa-sort-asc sortascicon'" aria-hidden="true"></i>
+      </li>
+      <li class="search drop"> 
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </li>
+      <li class="account drop"> 
+        <a href="javascript:void(0);">
+          <i class="icon icon-info"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="contact-info">
+      <li class="career">
+        <a href="/careers">CAREERS </a>
+      </li>
+      <li class="contact">
+        <a class="colorbox-load init-colorbox-load-processed cboxElement" id="contact-us-top" href="#">Contact Us</a>
+      </li>
+      <li class="country">
+        <div class="country-list">
+          <div class="country-main drop india" id="india"> 
+            <span class="in flag"></span> 
+            <span class="phone-no"> +91 973 114 9808</span> 
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<div class="lang-drop other-drop active" *ngIf = "!isShowlang">
+  <div class="container">
+    <ul>
+      <li>Select a Language</li>
+      <li class="active">
+        <a href="https://www.ascentias.com">English</a>
+      </li>
+      <li>
+        <a href="https://www.ascentias.com/coming-soon">Deutsch</a>
+      </li>
+      <li>
+        <a href="https://www.ascentias.com/coming-soon">日本語</a>
+      </li>
+      <li>
+        <a href="https://www.ascentias.com/coming-soon">Français</a>
+      </li>
+      <li>
+        <a href="https://www.ascentias.com/coming-soon">Español</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<section class="main-header">
+  <div class="container">
+    <h2 class="ascentias vertical-align-middle">
+      <a href="https://www.ascentiastech.com">
+        <img src="/assets/image/at.png" alt="">
+      </a>
+      <span>  </span>
+    </h2>
+    <div class="header-nav desk"> 
+      <span class="close-icon"> 
+        <i>&nbsp;</i> 
+        <i>&nbsp;</i> 
+      </span>
+      <ul class="top-links">
+        <li class="about caret" data-content="about-submenu" (click) = togglewhoweare() [ngClass]="isShowwhoweare ? 'hidewhoweare' : 'showwhoweare active'">
+          <a>WHO WE ARE</a>
+        </li>
+        <li class="whatdo caret" data-content="what-we-do-submenu" (click) = togglewhatwedo() [ngClass]="isShowwhatwedo ? 'hidewhatwedo' : 'showwhatwedo active'">
+          <a>WHAT WE DO</a>
+        </li>
+        <li class="wework caret" data-content="we-work-with-submenu" (click) = toggleweworkwith() [ngClass]="isShowweworkwith ? 'hideweworkwith' : 'showweworkwith active'">
+          <a >WE WORK WITH</a>
+        </li>
+        <li class="tech caret" data-content="tech-submenu" (click) = toggletechnologies() [ngClass]="isShowtechnologies ? 'hidetechnologies' : 'showtechnologies active'">
+          <a >TECHNOLOGIES</a>
+        </li>
+        <li style="display:none;">
+          <a href="javascript:void(0);">Enterprise Solutions</a>
+        </li>
+        <li style="display:none;">
+          <a href="javascript:void(0);">Industries Served</a>
+        </li>
+        <li style="display:none;">
+          <a href="javascript:void(0);">Quick Links</a>
+        </li>
+        <li style="display:none;">
+          <a href="javascript:void(0);">Team Augmentation</a>
+        </li>
+      </ul>
+    </div>
+     <span class="menu-icon1"> 
+      <i>&nbsp;</i> 
+      <i>&nbsp;</i> 
+      <i>&nbsp;</i> 
+    </span>
+    <div class="menu-main">
+      <div class="menu"> 
+        <a href="#"> 
+          <span class="menu-text">MENU</span> 
+          <span class="menu-icon"> 
+            <i>&nbsp;</i> 
+            <i>&nbsp;</i> 
+            <i>&nbsp;</i> 
+          </span> 
+        </a>
+      </div>
+      <!--<div class="year-comp">
+        <div class="cmmi"> 
+          <span>CMMi <br> LEVEL</span> 
+          <span class="count">3</span>
+        </div><div class="exp"> 
+          <span class="count">10+</span> 
+          <span>Years of <br>Excellence</span>
+        </div>
+      </div>
+      <div class="year-comp-mobile">
+        <div class="cmmi">CMMi LEVEL 5</div>
+        <div class="exp"> 24+ Years of Excellence</div>
+      </div>-->
+    </div>
+  </div> 
+</section>
+<div class="region region-submenu" *ngIf = "!isShowwhoweare || !isShowwhatwedo || isShowweworkwith || isShowtechnologies">
+  <div id="block-custom-ascentias-header-submenu-content" class="block block-custom-ascentias">
+    <div class="contents">
+      <div class="about-submenu dropcontent" [ngClass]="isShowwhoweare ? '' : 'active'">
+        <div class="container">
+          <ul class="clearfix about-parent-dropdown">
+            <li class="about-submenu-content">
+              <h3 class="dropdown-title">Company</h3>
+              <ul class="company-submenu clearfix">
+                <li>
+                  <a href="https://www.ascentias.com/overview">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/overview-icon_0.png">
+                    </i>
+                    <span>About Company</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ascentias.com/clientele-list">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/clientele-icon_0.png">
+                    </i>
+                    <span>Clientele</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ascentias.com/corporate-facts">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/corporate-icon.png">
+                    </i>
+                    <span>Corporate Facts</span>
+                  </a>
+                </li>
+                <!--<li>
+                  <a href="https://www.ascentias.com/certifications">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/certification-icon.png">
+                    </i>
+                    <span>Certifications</span>
+                  </a>
+                </li>-->
+                <li>
+                  <a href="https://www.ascentias.com/our-partners">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/partner-icon-top.png">
+                    </i>
+                    <span>Partners</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ascentias.com/infrastructure">
+                    <i class="fa fa-arrows" aria-hidden="true"></i>
+                    <span>Flexibility</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.ascentias.com/global-presence">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/global-icon.png">
+                    </i>
+                    <span>Global Presence</span>
+                  </a>
+                </li>
+                <!--<li>
+                  <a href="https://www.ascentias.com/our-csr-initiatives">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/CRS.png">
+                    </i>
+                    <span>CSR</span>
+                  </a>
+                </li>-->
+              </ul>
+            </li>
+            <li class="about-submenu-content">
+              <div id="block-block-1" class="block block-block">
+                <div class="contents">
+                  <h3 class="dropdown-title">Why Ascentias?</h3>
+                  <ul class="whyneost-submenu">
+                    <li><p>Ascentias Techn is one of the leading organizations that offer an opportunity to hire developers in India with great expertise. Whether your requirements are for long-term or short-term or hourly-basis, Ascentias delivers solutions that are nothing short of perfection.</p>
+                    <p>We develop partnerships to create solid value for our clients. We are flexible in our engagement model, delivery process and pricing model to deliver top value to our clients.
+                  </p></li>
+                  </ul>
+                  <p>
+                    <a class="vision-mission-btn" href="/our-vision-mission">Vision &amp; Mission</a>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="about-submenu-content">
+              <div id="block-block-2" class="block block-block">
+                <div class="contents">
+                  <h3 class="dropdown-title">We are Hiring</h3>
+                  <p>
+                    <span>Working at Ascentias Tech is an exuberant experience for professionals who have the attitude to walk an extra mile and convert opportunities into possibilities.</span>
+                  </p>
+                  <p>
+                    <span>Grow with the Leaders!</span>
+                  </p>
+                  <p>
+                    <a class="opening-btn" href="/careers" target="_parent">OPPORTUNITIES @ Accentias</a>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+          <!--<div class="business-referal-area">
+            <div class="business-referal-area-heading">
+              <h3 class="dropdown-title">Business Referral <br>Program</h3>
+            </div>
+            <div class="referal-area-right">
+              <div class="referal-area-right-text">
+                <p>Our business referral program is a relationship-driven revenue channel aimed at building a strong relationship based on trust, values, and a growth mindset.</p>
+              </div>
+              <div class="referal-area-right-btn"> 
+                <a href="#">Refer &amp; Earn</a>
+              </div>
+            </div>
+          </div>-->
+          <!--<div class="who-we-are-bottom-content">
+            <div class="who-we-are-bottom-heading">
+              <h3 class="dropdown-title">Quick Links</h3>
+            </div>
+            <div class="quick-links-content">
+              <ul class="quick-links">
+                <li>
+                  <a href="#">
+                    <i class="icon "></i>
+                    <span>Business Referral Program</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.neosofttech.com/blogs">
+                    <i class="icon "></i>
+                    <span>Blogs</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon "></i>
+                    <span>Engagement Models</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon "></i>
+                    <span>Development Models</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="what-we-do-submenu dropcontent" [ngClass]="isShowwhatwedo ? '' : 'active'">
+        <div class="container">
+          <h3 class="dropdown-title">What we do</h3>
+          <ul class="clearfix">
+            <li class="what-we-do-submenu-content">
+              <div class="info-div">
+                <h3> <span>END-TO-END </span> <br> PRODUCT <br> ENGINEERING</h3> 
+                <a class="more-arrow" href="https://www.ascentias.com/end-to-end-product-engineering">
+                  <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+              </div>
+              <div class="info-div">
+                <h3> <span> ENTERPRISE </span> <br> DIGITAL <br> TRANSFORMATION</h3> 
+                <a class="more-arrow" href="https://www.ascentias.com/enterprise-digital-transformation">
+                  <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </li>
+            <li class="what-we-do-submenu-content">
+              <div class="sb-container menuscrollContainer menu-scroll-grid">
+                <!--<div class="sb-scrollbar-container">
+                  <div class="sb-scrollbar" style="height: 267px; top: 0px;"></div>
+                </div>-->
+                <div class="sb-content" style="max-height: 273px;">
+                  <ul id="prev-content" class="what-we-do-links clearfix">
+                    <li>
+                      <a href="https://www.neosofttech.com/services/mobile-application-development">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-mobile-app-top-icon.png">
+                        </i>
+                        <span>Mobile Applications</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/web-development">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-web-top-icon.png">
+                        </i>
+                        <span>Web Development</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/cloud-computing">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-cloud-top-icon.png">
+                        </i>
+                        <span>Cloud Computing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/artificial-Intelligence-machine-learning">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/ai-ml_0.png">
+                        </i>
+                        <span>AI &amp; ML</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/data-science">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/1449158_1.png">
+                        </i>
+                        <span>Data Science</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/internet-of-things-iot">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-iot-top-icon.png">
+                        </i>
+                        <span>Internet of Things (IoT)</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/blockchain">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-menuchain-top-icon.png">
+                        </i>
+                        <span>Blockchain</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/devops">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/devops-icon.png">
+                        </i>
+                        <span>DevOps</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/software-qa-and-testing">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/what-we-qa-top-icon.png">
+                        </i>
+                        <span>QA &amp; Testing</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/sap">
+                        <i class="icon ">
+                          <img src="https://images.neosofttech.com/sites/default/files/sap1_0.png">
+                        </i>
+                        <span>SAP</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.neosofttech.com/services/user-experience-and-user-interface-design"><i class="icon ">
+                        <img src="https://images.neosofttech.com/sites/default/files/what-we-uxui-top-icon.png">
+                      </i>
+                      <span>UX / UI Design</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.neosofttech.com/services/software-consulting">
+                      <i class="icon ">
+                        <img src="https://images.neosofttech.com/sites/default/files/menu-software-consulting_1_0.png">
+                      </i>
+                      <span>Software Consulting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.neosofttech.com/services/internet-marketing">
+                      <i class="icon ">
+                        <img src="https://images.neosofttech.com/sites/default/files/what-we-internet-top-icon.png">
+                      </i>
+                      <span>Internet Marketing</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!--<div class="what-we-do-bottom-content">
+          <div class="team-img"> 
+            <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/user-image.png" alt="user-image">
+          </div>
+          <div class="team-content">
+            <h3>Team Augmentation</h3>
+            <p>Great work needs great talent &amp; skills. We help save time and money.</p>
+            <ul class="team-links">
+              <li>
+                <a href="https://www.neosofttech.com/#">
+                  <i class="icon "></i>
+                  <span>Resource as a Service (<h2>Offshore, Onsite &amp; Hybrid</h2>)</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/#">
+                  <i class="icon "></i>
+                  <span>ODC / BOT </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hire-btn"> 
+            <a href="https://www.neosofttech.com/hire-a-team">Hire Now</a>
+          </div>
+        </div>-->
+      </div>
+    </div>
+    <div class="we-work-with-submenu dropcontent" [ngClass]="isShowweworkwith ? '' : 'active'">
+      <div class="container">
+        <h3 class="dropdown-title">We Work With</h3>
+        <ul class="we-work-with-links clearfix">
+          <li>
+            <a href="https://www.neosofttech.com/we-work#Enterprises">
+              <i class="icon ">
+                <img src="https://images.neosofttech.com/sites/default/files/icon-enterprise_0.png">
+              </i>
+              <span>Enterprises</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.neosofttech.com/we-work#Agencies">
+              <i class="icon ">
+                <img src="https://images.neosofttech.com/sites/default/files/agencies-icon-top.png">
+              </i>
+              <span>Agencies</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.neosofttech.com/we-work#Startups">
+              <i class="icon ">
+                <img src="https://images.neosofttech.com/sites/default/files/startup-icon-top.png">
+              </i>
+              <span>Startup</span>
+            </a>
+          </li>
+        </ul>
+        <div class="we-work-with-submenu-content">
+          <h3 class="dropdown-title">Industries Served</h3>
+            <ul class="clearfix dropdown-industries-list">
+              <li>
+                <a href="https://www.neosofttech.com/industries#banking-and-finance">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/banking-and-finance-top.png">
+                  </i>
+                  <span>Banking &amp; Finance</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#ecommerce-and-retail">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/ecommerce-and-retail-top.png">
+                  </i>
+                  <span>Ecommerce &amp; Retail</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#education-and-elearning">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/education-and-elearning-top.png">
+                  </i>
+                  <span>Education &amp; Elearning</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#government">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/government-top.png">
+                  </i>
+                  <span>Government / Semi Government</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#healthcare">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/healthcare-top.png">
+                  </i>
+                  <span>Healthcare</span>
+                  </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#insurance">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/insurance-top.png">
+                  </i>
+                  <span>Insurance</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#it">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/it-top.png">
+                  </i>
+                  <span>IT and Consulting</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#manufacturing">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/manufacturing-top.png">
+                  </i>
+                  <span>Manufacturing</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#media-and-entertainment">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/media-and-entertainment-top.png">
+                  </i>
+                  <span>Media &amp; Entertainment</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#news-and-publication">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/news-and-publication-top.png">
+                  </i>
+                  <span>News &amp; Publication</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#products">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/products-top.png">
+                  </i>
+                  <span>Tech Startups</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.neosofttech.com/industries#telecom">
+                  <i class="icon">
+                    <img src="https://images.neosofttech.com/sites/all/themes/neosoft2017/images/telecom-top.png">
+                  </i>
+                  <span>Telecom</span>
+                </a>
+              </li>
+            </ul>
+            <!--<h4 class="industry-tagline">Delivered over <span>6500</span> projects across <span> 22 </span></h4>-->
+          </div>
+        </div>
+      </div>
+      <div class="tech-submenu dropcontent" [ngClass]="isShowtechnologies ? '' : 'active'">
+        <div class="container">
+          <h3 class="dropdown-title">Technologies</h3>
+            <div class="techdropdown-content techdropdownfirstchild">
+              <ul class="techdropdown-submenu clearfix">
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/mobile">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/mobile-icon.png">
+                    </i>
+                    <span>Mobile</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/microsoft">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/ms-top-icon.png">
+                    </i>
+                    <span>Microsoft</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/open-source">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/os-top-icon.png">
+                    </i>
+                    <span>Open-Source</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/java">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/java-top-icon.png">
+                    </i>
+                    <span>Java</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/front-end-development">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/frontend-top-icon.png">
+                    </i>
+                    <span>Frontend</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/database">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/database-top-icon.png">
+                    </i>
+                    <span>Databases</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/cloud-infrastructure">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/cloud-top-icon.png">
+                    </i>
+                    <span>Cloud &amp; Infrastructure</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/artificial-Intelligence-and-machine-learning">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/ai-ml_1.png">
+                    </i>
+                    <span>AI &amp; ML</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/data-science">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/1449158_2.png">
+                    </i>
+                    <span>Data Science</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/internet-of-things-iot">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/iot-top-icon.png">
+                    </i>
+                    <span>Internet Of Things</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/blockchain-development">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/menuchain_1.png">
+                    </i>
+                    <span>Blockchain</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/devops">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/devops-icon_0.png">
+                    </i>
+                    <span>DevOps</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuparent">
+                  <a href="https://www.neosofttech.com/technologies/SAP-technologies">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/sap1_1.png">
+                    </i>
+                    <span>SAP</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="techdropdown-content">
+              <h3 class="dropdown-title">Enterprise Solutions</h3>
+              <ul class="techdropdown-submenu enterprise-menus clearfix">
+                <li class="techdropdown-submenuchild">
+                  <a href="https://www.neosofttech.com/technologies/customer-relationship-management-crm">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/crm-top-icon.png">
+                    </i>
+                    <span>Customer Relationship Management (CRM)</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuchild">
+                  <a href="https://www.neosofttech.com/technologies/ecommerce-solutions">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/ecom-top-icon.png">
+                    </i>
+                    <span>Ecommerce Solutions</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuchild">
+                  <a href="https://www.neosofttech.com/technologies/content-management-system-cms">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/cms-top-icon.png">
+                    </i>
+                    <span>Content Management System (CMS)</span>
+                  </a>
+                </li>
+                <li class="techdropdown-submenuchild">
+                  <a href="https://www.neosofttech.com/technologies/enterprise-resource-planing-erp">
+                    <i class="icon ">
+                      <img src="https://images.neosofttech.com/sites/default/files/enterprise-top-icon.png">
+                    </i>
+                    <span>Enterprise Resource Planning (ERP)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+</div>
+  </div>
+</div>
+</header>
+</div>
+<app-homecarousel></app-homecarousel>
+<!--<div class="toolbar_head" role="banner">
+  <img
+    width="40"
+    alt="Ascentias Logo"
+    src="/assets/image/at.png"
+  />
+  <span>Welcome</span>
+    <div class="spacer"></div>
+  <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+    
+    
+    
+  </a>
+</div>-->
+
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+

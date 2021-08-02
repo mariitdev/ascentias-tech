@@ -1,0 +1,3361 @@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<style>
+
+.sec-background { 
+  background: url(assets/bg/bg-blurb-general.svg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .github-star-badge {
+    color: #24292e;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: 3px;
+    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+    margin-left: 4px;
+    font-weight: 600;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  }
+
+  .github-star-badge:hover {
+    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
+    border-color: rgba(27,31,35,.35);
+    background-position: -.5em;
+  }
+
+  .github-star-badge .material-icons {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+    padding-inline-start: 0px !important;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  height: 1000px !important;
+}
+.banner{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /*opacity: 0.8;*/
+  -webkit-filter: blur(2px);
+}
+.banner .content{
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+.banner .content h1{
+  margin: 0;
+  padding: 0;
+  font-size: 4.5em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 3px 0 6px #0048aa;
+}
+
+.banner .content p{
+  font-size: 2em;
+  color: #fff;
+}
+
+.nonsticky-header {
+    position: initial;
+    top: 0;
+    height: 75px;
+}
+.hero-nav .fl-html {
+    background-color: #0048aa;
+    height: 75px;
+    width: 100%;
+    z-index: 100;
+}
+.hero-nav .fl-html {
+    left: 0;
+}
+.header-comp {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -51px;
+}
+nav.bt-nav {
+    text-align: center;
+}
+.bt-nav ul {
+    padding-left: 0;
+}
+nav.bt-nav ul li {
+    position: initial;
+}
+
+nav.bt-nav ul li {
+    position: relative;
+    z-index: 999;
+}
+nav.bt-nav ul li {
+    display: inline-block;
+    top: 53px;
+}
+nav.bt-nav ul li a {
+    color: #fff;
+}
+nav.bt-nav .nav-logo #header-logo {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    /*width: 135px;*/
+  transition: height .15s ease,opacity .2s ease;
+  border: 7px solid #0048aa;
+}
+.logo-menu{
+  right: 280px;
+  width: 100px;
+}
+.logo_img{
+  transition: height .32s ease !important;
+  /*width:106px !important;*/
+}
+nav .nav-item{
+  border-right: 1px solid #636262;
+  left: 270px;
+  width: 103px;;
+}
+.content1{
+    float: left;
+    /*padding-right: 404px;*/
+    color:#2466bf;
+    text-transform: uppercase;
+    width: 50%;
+}
+.c2 .letter , .content1 .letter1, .content2 .contentletter, .content3 .contentletter3 , .content4 .contentletter4 {
+  display: inline-block;
+  line-height: 1em;
+}
+.content2, .content3, .content4{    
+    float: left;
+    position: absolute;
+    /*padding: 6px 0px 0px 385px;*/
+}
+.sticky {
+    background: #fff;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+    position: fixed;
+    top: 0;
+    height: 37px !important;
+    width: 100%;
+}
+.header-comp-sticky {
+    bottom: 25px !important;
+}
+.company-name{
+  right: 250px;
+  width: 200px;
+}
+.nav-name span{
+    font-weight: 800;
+    font-size: 23px;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+.digi_experts{
+  width: 100%;
+  height: 94vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  top: 46px;
+}
+.digi_experts .head_nav{
+  text-align: center;
+  margin-bottom:20px;
+  position: relative;
+  width: 100%;
+}
+.digi_experts .head_nav .container{
+  /*margin: 0px 0px 0px 0px;*/
+}
+.digi_experts .head_nav .container h1{
+    color: #0048aa;
+    font-family: "Orkney Light", Lato, Sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.1em;
+    padding: 0;
+    margin: 0;
+}
+.digi_experts .content_nav{
+    color: #1F2041;
+    font-family: "Lato", Lato, Sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+.digi_experts .content_nav .container{
+    /*margin: -16px 0px 30px 0px;
+    padding: 0px 200px 0px 200px;*/
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+}
+.digi_experts .content_nav .container .container-sub{
+    text-align: center;
+}
+.digi_experts .content_nav .container .container-sub span{
+    box-sizing: border-box;
+    text-align: center;
+    color: #1F2041;
+    font-family: "Lato", Lato, Sans-serif;
+    font-size: 18px;
+}
+.box-section{
+    width: 100%;
+    position: relative;
+}
+.box-section .box-container{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.box-row{ 
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+}
+.box-column {
+    width: 30%;
+    position: relative;
+    min-height: 1px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.services-column{
+    width: 50%;
+    position: relative;
+    min-height: 1px;
+    text-align: center;
+}
+.services-column-two{
+    background: #f8f9fa;
+    padding: 24px;
+    right: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 69%;
+    top: 76px;
+    /*height: 70%;*/
+}
+.box-column-wrap {
+    padding: 10px;
+    width: 75%;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.box-inner-wrap{
+    position: relative;
+    width: 100%;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+}
+.box-inner-content{
+  width: 100%;
+  --translate: 0,0;
+  position: relative;
+}
+.box-container{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    -webkit-transition: background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+    transition: background .3s,border .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+    -o-transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+}
+.box-cont-anchor{
+    display: block;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    overflow: hidden;
+}
+.box-anchor-bg-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.box-anchor-bg-img{    
+    background-image: url(https://www.bairesdev.com/wp-content/uploads/2021/01/Dedicated-Team_.jpg);
+    transition-duration: 500ms; 
+    filter: brightness( 100% ) contrast( 100% ) saturate( 100% ) blur( 0px ) hue-rotate(0deg);
+    will-change: transform;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+.box-anchor-bg-img.bg-img1{
+    background-image: url(https://www.bairesdev.com/wp-content/uploads/2021/01/Dedicated-Team_.jpg);
+}
+.box-anchor-bg-img.bg-img2{
+    background-image: url(https://www.bairesdev.com/wp-content/uploads/2020/07/IT-Staff-Augmentation-e1611862407225.jpg);
+}
+.box-anchor-bg-img.bg-img3{
+    background-image: url(https://www.bairesdev.com/wp-content/uploads/2021/01/Software-Outsourcing-Services72-1-640x683.jpg);
+}
+.box-anchor-bg-img-overlay{
+    background-color: rgba(31, 32, 65, 0.3);
+    transition-duration: 500ms;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+.box-content{
+    min-height: 350px;
+    text-align: center;
+    padding: 25px 25px 25px 25px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+}
+.box-content.cont1, .box-content.cont2, .box-content.cont3{
+    /*padding: 3px;*/
+}
+.box-content-title{
+    margin-bottom: 10px;
+    transition-duration: 500ms;
+    font-family: "Lato", Lato, Sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.2em;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+}
+.box-content-item{
+    transition-duration: 500ms;
+    font-family: "Lato", Lato, Sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 0);
+    color: #fff;
+    border-color: #fff;
+    font-weight: 400;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.set_background{
+  background-color: black;
+  border: 1px solid black;
+  opacity: 0.8;
+}
+.banner .set_background{
+  background-color: black;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+.animate-content-p{
+  width: 47%;
+  float: right;
+  text-transform: uppercase;
+  padding-top: 7px;
+}
+.nav-right-banner-video-content{
+    width: 2%;
+    float: left;
+    padding-top: 13px;
+    font-size: 20px !important;
+    color: #2466bf !important;
+}
+body { 
+  background: #EEE; 
+  overflow-x:hidden;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+.container_left {
+    position: fixed;
+    margin: 35px auto;
+    padding: 0 0;
+    clear: both;
+    z-index: 99;
+    top: 0;
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 1210px;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .container {
+        width: 1030px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container {
+        width: 682px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 428px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .container {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
+
+
+  
+.mcd-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  /*height: 100px;*/
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  
+  /* == */
+  width: 250px;
+  height:100vh;
+  /* == */
+}
+.mcd-menu li {
+  position: relative;
+  /*float:left;*/
+}
+.mcd-menu li a {
+  display: block;
+  text-decoration: none;
+  /*padding: 48px 20px;*/
+  padding-top: 35px;
+  padding-left: 20px;
+  padding-bottom: 59px;
+  color: #777;
+  /*text-align: center;
+  border-right: 1px solid #E7E7E7;*/
+  
+  /* == */
+  text-align: left;
+  height: 36px;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  /* == */
+}
+.mcd-menu li a i {
+  /*display: block;
+  font-size: 30px;
+  margin-bottom: 10px;*/
+  
+  /* == */
+  float: left;
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  /* == */
+  
+}
+/* == */
+.mcd-menu li a p {
+  float: left;
+  margin: 0 ;
+}
+/* == */
+
+.mcd-menu li a strong {
+  display: block;
+  text-transform: uppercase;
+}
+.mcd-menu li a small {
+  display: block;
+  font-size: 10px;
+}
+
+.mcd-menu li a i, .mcd-menu li a strong, .mcd-menu li a small {
+  position: relative;
+  
+  transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+}
+.mcd-menu li:hover > a i {
+    opacity: 1;
+    -webkit-animation: moveFromTop 300ms ease-in-out;
+    -moz-animation: moveFromTop 300ms ease-in-out;
+    -ms-animation: moveFromTop 300ms ease-in-out;
+    -o-animation: moveFromTop 300ms ease-in-out;
+    animation: moveFromTop 300ms ease-in-out;
+}
+.mcd-menu li:hover a strong {
+    opacity: 1;
+    -webkit-animation: moveFromLeft 300ms ease-in-out;
+    -moz-animation: moveFromLeft 300ms ease-in-out;
+    -ms-animation: moveFromLeft 300ms ease-in-out;
+    -o-animation: moveFromLeft 300ms ease-in-out;
+    animation: moveFromLeft 300ms ease-in-out;
+}
+.mcd-menu li:hover a small {
+    opacity: 1;
+    -webkit-animation: moveFromRight 300ms ease-in-out;
+    -moz-animation: moveFromRight 300ms ease-in-out;
+    -ms-animation: moveFromRight 300ms ease-in-out;
+    -o-animation: moveFromRight 300ms ease-in-out;
+    animation: moveFromRight 300ms ease-in-out;
+}
+
+.mcd-menu li:hover > a {
+  color: #0048aa;
+}
+.mcd-menu li a.active {
+  position: relative;
+  color: #0048aa;
+  border:0;
+  /*border-top: 4px solid #e67e22;
+  border-bottom: 4px solid #e67e22;
+  margin-top: -4px;*/
+  box-shadow: 0 0 5px #DDD;
+  -moz-box-shadow: 0 0 5px #DDD;
+  -webkit-box-shadow: 0 0 5px #DDD;
+  
+  /* == */
+  border-left: 4px solid #0048aa;
+  border-right: 4px solid #0048aa;
+  margin: 0 -4px;
+  /* == */
+}
+.mcd-menu li a.active:before {
+  content: "";
+  position: absolute;
+  /*top: 0;
+  left: 45%;
+  border-top: 5px solid #e67e22;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;*/
+  
+  /* == */
+  top: 42%;
+  left: 0;
+  border-left: 5px solid #0048aa;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  /* == */
+}
+
+/* == */
+.mcd-menu li a.active:after {
+  content: "";
+  position: absolute;
+  top: 42%;
+  right: 0;
+  border-right: 5px solid #0048aa;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+/* == */
+
+@-webkit-keyframes moveFromTop {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(200%);
+        -moz-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes moveFromLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+        transform: translateX(200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+@-webkit-keyframes moveFromRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+}
+
+
+
+.mcd-menu li ul,
+.mcd-menu li ul li ul {
+  position: absolute;
+  height: auto;
+  min-width: 200px;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  /*border-top: 4px solid #e67e22;*/
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  /*top: 130px;*/
+  z-index: 1000;
+  
+  /* == */
+  left:280px;
+  top: 0px;
+  border-left: 4px solid #0048aa;
+  list-style: none;
+  /* == */
+}
+.mcd-menu li ul:before {
+  content: "";
+  position: absolute;
+  /*top: -8px;
+  left: 23%;
+  border-bottom: 5px solid #e67e22;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;*/
+  
+  /* == */
+  top: 40px;
+  left: -9px;
+  border-right: 5px solid #0048aa;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  /* == */
+}
+.mcd-menu li:nth-child(5) ul:before {
+  top: 325px;
+  }
+.mcd-menu li:hover > ul,
+.mcd-menu li ul li:hover > ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  /*top: 100px;*/
+  
+  /* == */
+  left:250px;
+  /* == */
+}
+/*.mcd-menu li ul li {
+  float: none;
+}*/
+.mcd-menu li ul li a {
+  padding: 10px;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #EEE;
+  
+  /* == */
+  height: auto;
+  /* == */
+}
+.mcd-menu li ul li a i {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.mcd-menu li ul li ul {
+  left: 230px;
+  top: 0;
+  border: 0;
+  border-left: 4px solid #0048aa;
+}  
+.mcd-menu li ul li ul:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  /*left: -14px;*/
+  /* == */
+  left: -9px;
+  /* == */
+  border-right: 5px solid #0048aa;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.mcd-menu li ul li:hover > ul {
+  top: 0px;
+  left: 200px;
+}
+
+
+
+/*.mcd-menu li.float {
+  float: right;
+}*/
+.mcd-menu li a.search {
+  /*padding: 29px 20px 30px 10px;*/
+  padding: 10px 10px 15px 10px;
+  clear: both;
+}
+.mcd-menu li a.search i {
+  margin: 0;
+  display: inline-block;
+  font-size: 18px;
+}
+.mcd-menu li a.search input {
+  border: 1px solid #EEE;
+  padding: 10px;
+  background: #FFF;
+  outline: none;
+  color: #777;
+  
+  /* == */
+  width:170px;
+  float:left;
+  /* == */
+}
+.mcd-menu li a.search button {
+  border: 1px solid #0048aa;
+  /*padding: 10px;*/
+  background: #0048aa;
+  outline: none;
+  color: #FFF;
+  margin-left: -4px;
+  
+  /* == */
+  float:left;
+  padding: 10px 10px 11px 10px;
+  /* == */
+}
+.mcd-menu li a.search input:focus {
+  border: 1px solid #0048aa;
+}
+
+
+.search-mobile { 
+  display:none !important;
+  background:#0048aa;
+  border-left:1px solid #0048aa;
+  border-radius:0 3px 3px 0;
+}
+.search-mobile i { 
+  color:#FFF; 
+  margin:0 !important;
+}
+
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .mcd-menu {
+    margin-left:10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .mcd-menu {
+    width: 200px;
+  }
+  .mcd-menu li a {
+    height:30px;
+  }
+  .mcd-menu li a i {
+    font-size: 22px;
+  }
+  .mcd-menu li a strong {
+    font-size: 12px;
+  }
+  .mcd-menu li a small {
+    font-size: 10px;
+  } 
+  .mcd-menu li a.search input {
+    width: 120px;
+    font-size: 12px;
+  }
+  .mcd-menu li a.search buton{
+    padding: 8px 10px 9px 10px;
+  }
+  .mcd-menu li > ul {
+    min-width:180px;
+  }
+  .mcd-menu li:hover > ul {
+    min-width:180px;
+    left:200px;
+  }
+  .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+    min-width:150px;
+  }
+  .mcd-menu li ul li:hover > ul {
+    left:180px;
+    min-width:150px;
+  }
+  .mcd-menu li ul li ul li:hover > ul {
+    left:150px;
+    min-width:150px;
+  }
+  .mcd-menu li ul a {
+    font-size:12px;
+  }
+  .mcd-menu li ul a i {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  
+  .mcd-menu { 
+    width: 50px;
+  }
+  .mcd-menu li a { 
+    position: relative;
+    padding: 12px 16px;
+    height:20px;
+  }
+  .mcd-menu li a small { 
+    display: none;
+  }
+  .mcd-menu li a strong { 
+    display: none;
+  }
+  .mcd-menu li a:hover strong,.mcd-menu li a.active strong {
+    display:block;
+    font-size:10px;
+    padding:3px 0;
+    position:absolute;
+    bottom:0px;
+    left:0;
+    background:#0048aa;
+    color:#FFF;
+    min-width:100%;
+    text-transform:lowercase;
+    font-weight:normal;
+    text-align:center;
+  }
+  .mcd-menu li .search { 
+    display: none;
+  }
+  
+  .mcd-menu li > ul {
+    min-width:180px;
+    left:70px;
+  }
+  .mcd-menu li:hover > ul {
+    min-width:180px;
+    left:50px;
+  }
+  .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+    min-width:150px;
+  }
+  .mcd-menu li ul li:hover > ul {
+    left:180px;
+    min-width:150px;
+  }
+  .mcd-menu li ul li ul li > ul {
+    left:35px;
+    top: 45px;
+    border:0;
+    border-top:4px solid #0048aa;
+  }
+  .mcd-menu li ul li ul li > ul:before {
+    left:30px;
+    top: -9px;
+    border:0;
+    border-bottom:5px solid #0048aa;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+  }
+  .mcd-menu li ul li ul li:hover > ul {
+    left:30px;
+    min-width:150px;
+    top: 35px;
+  }
+  .mcd-menu li ul a {
+    font-size:12px;
+  }
+  .mcd-menu li ul a i {
+    font-size:14px;
+  }
+  
+}
+
+@media only screen and (max-width: 479px) {
+    .mcd-menu { 
+    width: 50px;
+  }
+  .mcd-menu li a { 
+    position: relative;
+    padding: 12px 16px;
+    height:20px;
+  }
+  .mcd-menu li a small { 
+    display: none;
+  }
+  .mcd-menu li a strong { 
+    display: none;
+  }
+  .mcd-menu li a:hover strong,.mcd-menu li a.active strong {
+    display:block;
+    font-size:10px;
+    padding:3px 0;
+    position:absolute;
+    bottom:0px;
+    left:0;
+    background:#0048aa;
+    color:#FFF;
+    min-width:100%;
+    text-transform:lowercase;
+    font-weight:normal;
+    text-align:center;
+  }
+  .mcd-menu li .search { 
+    display: none;
+  }
+  
+  .mcd-menu li > ul {
+    min-width:180px;
+    left:70px;
+  }
+  .mcd-menu li:hover > ul {
+    min-width:180px;
+    left:50px;
+  }
+  .mcd-menu li ul li > ul, .mcd-menu li ul li ul li > ul {
+    min-width:150px;
+  }
+  .mcd-menu li ul li:hover > ul {
+    left:180px;
+    min-width:150px;
+  }
+  .mcd-menu li ul li ul li > ul {
+    left:35px;
+    top: 45px;
+    border:0;
+    border-top:4px solid #0048aa;
+  }
+  .mcd-menu li ul li ul li > ul:before {
+    left:30px;
+    top: -9px;
+    border:0;
+    border-bottom:5px solid #0048aa;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+  }
+  .mcd-menu li ul li ul li:hover > ul {
+    left:30px;
+    min-width:150px;
+    top: 35px;
+  }
+  .mcd-menu li ul a {
+    font-size:12px;
+  }
+  .mcd-menu li ul a i {
+    font-size:14px;
+  }
+    
+}
+.iwithtext .iwt-text a{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5px;
+  color: inherit;
+}
+.iwt-text{
+  font-size: 24px!important;
+  line-height: 33px!important;
+  font-family: Avenir-Light!important;
+  font-weight: 400;
+  color: #1a3340;
+  text-align: left;
+  vertical-align: middle;
+  position: absolute;
+  top: 0;left: -10px;
+  padding: 15px 10px 15px 65px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: calc(100% - 50px);
+  height: 100%;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  bottom: 0;
+  margin: auto;
+  line-height: 1;
+}
+.wpb_wrapper{
+  position: relative;
+  z-index: 2;
+}
+.column-bg-overlay{
+  opacity: 1; 
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.our-services-list{
+  margin-bottom: 0!important;
+}
+.iwithtext:nth-child(odd){
+  margin-right: 5%;
+}
+.iwithtext{
+  margin-bottom: 6%;
+  min-height: 40px;
+  text-align: left;
+  vertical-align: top;
+  width: 47%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.iwithtext img{
+  width: 46px!important;
+  height: 46px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  display: inline-block;
+  margin-bottom: 0;
+  padding:0;
+  max-width: 100%;
+}
+.iwithtext iwt-icon{
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 0;
+  position: static;
+  left:0;
+  top:0;
+}
+.services-inner-wrap img{
+  width: 70%;
+}
+.menu-button{
+  right: 288px;
+  width: 50px;
+  top: 55px !important;
+}
+.menu-button i{
+  color: white;
+  font-size: 24px;
+}
+.uppercase {
+text-transform: uppercase;
+}
+.text-opacity-60 {
+    --text-opacity: .6;
+}
+.text-black {
+    color: #333;
+    color: rgba(51,51,51,var(--text-opacity));
+    font-size: .75rem;
+    margin-top: 1rem;
+}
+.tech-img-span{
+  float:  left;
+  height: 110px;
+}
+.tech-img-span img{
+  height: 110px;
+}
+.page-section__block {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 17px;
+}
+.landing-header:after {
+    background: #299872;
+    bottom: -26px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
+    width: 72px;
+}
+.landing-header.landing-h2, h2.landing-header {
+    font-size: 36px;
+}
+.landing-header.landing-h2, h2.landing-header {
+    font-size: 28px;
+}
+.items-list--frameworks {
+    margin-bottom: -60px;
+}
+.items-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: -24px;
+    overflow: hidden;
+}
+.mb-12, .my-12 {
+    margin-bottom: 12px!important;
+}
+.items-list, .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+.items-list--frameworks .items-list__item {
+    margin-bottom: 60px;
+}
+.items-list--four .items-list__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 15%;
+}
+.items-list--frameworks .items-list__item-inner {
+    cursor: pointer;
+}
+.items-list--directions .items-list__item {
+    margin-bottom: 80px;
+    max-width: 25% !important;
+}
+.items-list--four .items-list__item-inner {
+    max-width: 252px;
+}
+.items-list--frameworks .items-list__item-inner .item-link {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+.item-link a {
+    color: #498cd8;
+    background-color: transparent;
+}
+.items-list--frameworks .items-list__item-inner .item-header {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 127px;
+}
+.items-list--frameworks .items-list__item-inner .item-header img {
+    display: block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: auto;
+    max-height: 128px;
+    max-width: 120px;
+    mix-blend-mode: luminosity;
+    opacity: .7;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    width: auto;
+}
+.items-list--frameworks .items-list__item-inner .item-title {
+    color: #7ebaee;
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.1666666667;
+    letter-spacing: .01em;
+    margin-top: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.items-list--frameworks .items-list__item-inner:hover .item-header img {
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+.items-list--directions {
+    margin-bottom: -80px;
+}
+.items-list__item-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+}
+.items-list--directions .items-list__item-inner .item-heading {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+}
+.items-list--directions .items-list__item-inner .item-heading img {
+    max-height: 100%;
+}
+.items-list--directions .items-list__item-inner a.item-title {
+    color: #000;
+    text-decoration: none;
+}
+
+.items-list--directions .items-list__item-inner .item-title {
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.1764705882;
+    margin-top: 19px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.items-list--directions .items-list__item-inner a:hover {   
+    color: #498cd8;
+    background-color: transparent;
+}
+.relative {
+    position: relative;
+}
+.left-0 {
+    left: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+.absolute {
+    position: absolute;
+}
+.contactus-img-1, .contactus-img-2{
+    width: 34% !important;
+}
+.contactus-img-3{
+  left: 182px;
+  bottom: 0px;
+  width: 98% !important;
+}
+/*.contact-container-box{
+    margin-top: 333px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+    background-color: #fff !important;
+}*/
+.contact-container-box {
+    width: 100%;
+    padding: 1rem;
+    margin-left: 0;
+    --bg-opacity: 1;
+    margin-top: 269px;
+    height: 500px;
+
+    border-radius: 40px;
+    -webkit-box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    box-shadow: 0 0 45px rgb(0 0 0 / 35%);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #f8f9fa;
+}
+.tracking-tight {
+    letter-spacing: -.95px;
+    --text-opacity: 1;
+    color: #333;
+    color: rgba(51,51,51,var(--text-opacity));
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+    padding-left: 17px;
+    color: #0048aa;
+    float: left;
+    width: 35%;
+}
+.success_msg{
+    float: right;
+    margin-right: 202px;
+}
+.contact-input-box{
+  float: left;
+  width: 50%;
+  position: relative;
+  padding-left: 1.07rem;
+  padding-right: 1.07rem;
+}
+.contact-input-box-control {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 1rem;
+}
+.form-item {
+    margin: 0;
+}
+
+.web-form-label {
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0em;
+    top: 0rem;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    text-align: left;
+    pointer-events: none;
+    color: #2f2f2f;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact-input-box-control input[type=text], .contact-input-box-control input[type=email], .contact-input-box-control select, .contact-input-box-control textarea{
+    border-style: solid;
+    border-width: 0 0 1px 0 !important;
+    border-color: #A4A4A4;
+    height: 2.45rem;
+    -webkit-transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+    -webkit-transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    min-width: initial;
+    border-radius: 0;
+    background: transparent;
+}
+.contact-input-box-control input[type=text], .contact-input-box-control input[type=input], .contact-input-box-control input[type=password], .contact-input-box-control input[type=email], .contact-input-box-control input[type=number], .contact-input-box-control input[type=url], .contact-input-box-control input[type=tel], .contact-input-box-control input[type=search], .contact-input-box-control textarea, .contact-input-box-control select {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    color: #2d2d2d;
+    padding: 5px;
+    font-size: 1rem;
+    min-width: 300px;
+}
+.SumoSelect {
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    display: inline-block;
+    position: relative;
+    outline: none;
+    width: 100%;
+    text-align: left;
+}
+.SumoSelect select {
+    background-image: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 19px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #A4A4A4;
+    height: 2.45rem;
+    -webkit-transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+    -webkit-transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out;
+    transition: box-shadow 0.5s,border-color 0.25s ease-in-out,-webkit-box-shadow 0.5s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    min-width: initial;
+    border-radius: 0;
+    background: transparent;
+    text-transform: capitalize;
+}
+.SumoUnder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.SumoSelect > .CaptionCont {
+    position: relative;
+    min-height: 14px;
+    background-color: transparent;
+    border-radius: 0px;
+    margin: 0;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #A4A4A4;
+    background-image: url(https://images.neosofttech.com/sites/all/themes/neosoft2017/images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 19px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    -webkit-appearance: none;
+    color: #2f2f2f;
+    font-family: "Lato-Black",sans-serif;
+}
+.SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont, .SumoSelect.open > .CaptionCont {
+    box-shadow: 0 0 2px #7799d0;
+    border-color: #7799D0;
+}
+.SumoSelect > .CaptionCont {
+    position: relative;
+    border: 1px solid #A4A4A4;
+    min-height: 14px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 0;
+}
+.SumoSelect > .optWrapper > .options li.opt label, .SumoSelect > .CaptionCont, .SumoSelect .select-all > label {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+.SumoSelect p {
+    margin: 0;
+}
+.SelectBox {
+    padding: 5px 8px;
+}
+.SumoSelect > .CaptionCont > span {
+    display: block;
+    padding-right: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+}
+.SumoSelect > .CaptionCont > label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    left: auto;
+    display: none;
+}
+.SumoSelect > .CaptionCont > label > i {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wMdBhAJ/fwnjwAAAGFJREFUKM9jYBh+gBFKuzEwMKQwMDB8xaOWlYGB4T4DA0MrsuapDAwM//HgNwwMDDbYTJuGQ8MHBgYGJ1xOYGNgYJiBpuEpAwODHSF/siDZ+ISBgcGClEDqZ2Bg8B6CkQsAPRga0cpRtDEAAAAASUVORK5CYII=);
+    background-position: center center;
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+.SumoSelect > .optWrapper {
+    border: 1px solid #323233;
+}
+.SumoSelect > .optWrapper {
+    display: none;
+    z-index: 1000;
+    top: 30px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 3px 3px rgb(0 0 0 / 11%);
+    border-radius: 3px;
+    overflow: hidden;
+}
+.SumoSelect > .optWrapper > .options {
+    z-index: 3;
+}
+.SumoSelect > .optWrapper > .options {
+    border-radius: 2px;
+    position: relative;
+    max-height: 167px;
+}
+.SumoSelect > .optWrapper ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+.SumoSelect > .optWrapper > .options > li.opt:first-child {
+    border-radius: 2px 2px 0 0;
+}
+.SumoSelect > .optWrapper > .options li.opt {
+    padding: 6px 6px;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+}
+.SumoSelect > .optWrapper > .options li.opt:hover {
+    background-color: #E4E4E4;
+}
+.options li {
+    list-style: none;
+}
+.contact-form-left-sec{
+    width: 70%;
+    float: left;
+}
+.contact-form-right-sec{
+    width: 23%;
+    float: right;
+}
+.contact-form-right-sec h3{
+    text-align: left;
+    color: #0048aa;
+}
+.contact-form-right-sec ul{
+    list-style: none;
+    text-align: left;
+}
+.invalid-feedback{
+  position: absolute;
+}
+
+</style>
+<section class="sec-background">
+<div class="banner" #stickyMenu>
+    <video autoplay muted loop>
+        <source src="/assets/bg/bg-office-meeting.mp4" type="video/mp4">
+    </video>
+    <div class="box-anchor-bg-img-overlay set_background">
+    </div>
+    <div class="content">
+      <h1 class="c2">Ascentias Tech</h1>
+      <h2 class="content1">We build software that</h2><p class="nav-right-banner-video-content"><i class="fa fa-play"></i></p>
+      <div class="animate-content-p">
+        <p class="content2">grow your venture</p>
+        <p class="content3">scales your Business</p>
+        <p class="content4">propel your mission forward</p>
+      </div>
+    </div>
+</div>
+<section>
+<div class="fl-row fl-row-full-width fl-row-bg-none fl-node-5d8be3ff96baf" data-node="5d8be3ff96baf">
+  <div class="fl-row-content-wrap">
+    <div class="fl-row-content fl-row-full-width fl-node-content">
+      <div class="fl-col-group fl-node-5d8be3ff96bb0" data-node="5d8be3ff96bb0">
+        <div class="fl-col fl-node-5d8be3ff96bb1" data-node="5d8be3ff96bb1">
+          <div class="fl-col-content fl-node-content">
+            <div class="fl-module fl-module-html fl-node-5d8e2ccdd9c57 hero-nav" data-node="5d8e2ccdd9c57">
+              <div class="fl-module-content fl-node-content">
+                <div  class="fl-html nonsticky-header" id="navbar" (scroll)="onWindowScroll($event);">
+                  <header id="headerstick" class="header-comp">
+                    <nav class="bt-nav" >
+                      <ul>
+                        <li class="nav-menu menu-button">
+                          <button (click) = toggleleftmenu() class="navbar-toggler navbar-toggler-left rounded-0 border-0" id="megamenu-dropdown" type="button" data-target="#megamenu-dropdown" aria-controls="megamenu-dropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 20px;display: none;">
+                            <i class="fa fa-bars"></i>
+                          </button>
+                        </li>
+                        <li class="nav-logo logo-menu">
+                          <a class="logo" title="Home" href="/" >
+                            <img [@openClose]="isOpen ? 'open' : 'closed'" id="header-logo" src="/assets/image/asc_tech_2.gif" alt="Ascentiastech Logo Mark" title="Ascentiastech Logo Mark" style="transform:matrix(1, 0, 0, 1, 0, 0);width:135px;bottom:0;cursor:pointer">
+                          </a>
+                        </li>
+                        <li class="nav-name company-name">
+                          <span>Ascentias Tech</span>
+                        </li>
+                        <!--<li class="nav-item">
+                          <a class="nav-link fl-animated" data-scroll="" title="About" href="/">Home</a>
+                        </li>-->
+                        <li class="nav-item">
+                          <a class="nav-link fl-animated" data-scroll="" title="search"><i class="fa fa-search" ></i>  Search</a>
+                        </li>
+                        <!--<li class="nav-item dropdown js-services">
+                          <a class="nav-link fl-animated" data-scroll="" title="Services" href="/services">Services</a>
+                        </li>-->
+                        <li class="nav-item">
+                          <a class="nav-link fl-animated" data-scroll="" title="Careers" href="/careers">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link popmake-537 pum-trigger fl-animated" data-scroll="" title="Contact" href="/contact">Contact US</a>
+                        </li>
+                        <li style="top:62px;left: 250px;width: 200px;">
+                          <i class="fa fa-phone" aria-hidden="true" style="color:#ffffff;">&nbsp;+91 973 114 9808</i>
+                          <i class="fa fa-envelope" aria-hidden="true" style="color:#ffffff;">&nbsp;info@ascentiastech.com</i>
+                        </li>
+                        <li class="language drop" (click) = togglelanguage() [ngClass]="isShowlang ? 'blue_background_lang' : 'grey_background_lang'" style="color:#ffffff;left:247px;width: 50px;"> 
+                          <i class="fa fa-globe" ></i>
+                          <span class="lang"> EN </span>
+                          <i [ngClass]="isShowlang ? 'fa fa-sort-desc sortdescicon' : 'fa fa-sort-asc sortascicon'" aria-hidden="true"></i>
+                        </li>
+                      </ul>
+                    </nav>
+                  </header>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container_left" id="container_left_menu">
+<nav>
+    <ul class="mcd-menu" *ngIf="isShowleftmenu">
+      <li>
+        <a href="/home">
+          <i class="fa fa-home"></i>
+          <strong>Home</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+      </li>
+      <li>
+        <a href="/who-we-are">
+          <i class="fa fa-info-circle"></i>
+          <strong>Who We Are</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+        <ul>
+          <li><a href="#"><i class="fa fa-info-circle"></i>About Company</a></li>
+          <li><a href="#"><i class="fa fa-certificate"></i>Corporate Facts</a></li>
+          <li><a href="#"><i class="fa fa-user-plus"></i>Partners</a></li>
+          <li><a href="#"><i class="fa fa-globe"></i>Global Presence</a></li>
+          <li><a href="#"><i class="fa fa-users"></i>Clientle</a></li>
+          <li><a href="#"><i class="fa fa-binoculars"></i>Why Ascentias Tech- Vission & Mission</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/what-we-do">
+          <i class="fa fa-cog"></i>
+          <strong>What We Do</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+        <ul>
+          <li><a href="#"><i class="fa fa-cogs"></i>End to End Product Engineering</a></li>
+          <li><a href="#"><i class="fa fa-laptop"></i>Enterprise Digital Transformation</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/we-work-with">
+          <i class="fa fa-handshake-o"></i>
+          <strong>We Work With</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+        <ul>
+          <li><a href="#"><i class="fa fa-building"></i>Enterprises</a></li>
+          <li><a href="#"><i class="fa fa-phone-square"></i>Agencies</a></li>
+          <li><a href="#"><i class="fa fa-hourglass-start"></i>Startups</a></li>
+          <li><a href="#"><i class="fa fa-industry"></i>Industries Served</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/technologies">
+          <i class="fa fa-desktop"></i>
+          <strong>Technologies</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+        <ul style="top: -283px;">
+          <li><a href="#"><i class="fa fa-mobile"></i>Mobile</a></li>
+          <li><a href="#"><i class="fab fa-windows"></i>Microsoft</a></li>
+          <li><a href="#"><i class="fa fa-folder-open"></i>Open Source</a></li>
+          <li><a href="#"><i class="fab fa-java"></i>Java</a></li>
+          <li><a href="#"><i class="fas fa-laptop-code"></i>Frontend</a></li>
+          <li><a href="#"><i class="fas fa-database"></i>Database</a></li>
+          <li><a href="#"><i class="fas fa-cloud"></i>Cloud & Infrastructure</a></li>
+          <li><a href="#"><i class="fas fa-chart-line"></i>Customer Relationship Management</a></li>
+          <li><a href="#"><i class="fas fa-shopping-cart"></i>Ecommerse Solutions</a></li>
+          <li><a href="#"><i class="fas fa-tasks"></i>Content Management System</a></li>
+          <li><a href="#"><i class="fas fa-business-time"></i>Enterprise Resource Planning</a></li>
+
+        </ul>
+        <!--<ul>
+          <li><a href="#"><i class="fa fa-globe"></i>Mobile</a></li>
+          <li>
+            <a href="#"><i class="fa fa-group"></i>Our Team</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-female"></i>Leyla Sparks</a></li>
+              <li>
+                <a href="#"><i class="fa fa-male"></i>Gleb Ismailov</a>
+                <ul>
+                  <li><a href="#"><i class="fa fa-leaf"></i>About</a></li>
+                  <li><a href="#"><i class="fa fa-tasks"></i>Skills</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-female"></i>Viktoria Gibbers</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-trophy"></i>Rewards</a></li>
+          <li><a href="#"><i class="fa fa-certificate"></i>Certificates</a></li>
+        </ul>-->
+      </li>
+      <li>
+        <a href="/careers">
+          <i class="fa fa-briefcase"></i>
+          <strong>Careers</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <i class="fas fa-envelope"></i>
+          <strong>Contact Us</strong>
+          <!--<small>sweet home</small>-->
+        </a>
+      </li>
+      <!--<li class="float">
+        <a class="search">
+          <input type="text" value="search ...">
+          <button><i class="fa fa-search"></i></button>
+        </a>
+        <a href="" class="search-mobile">
+          <i class="fa fa-search"></i>
+        </a>
+      </li>-->
+    </ul>
+  </nav>
+  
+</div>
+<section>
+  <div class="digi_experts">
+    
+
+<section class="box-section">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="services-column">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="head_nav">
+              <div class="container" style="width:50%;">
+                <h1>Services</h1>
+              </div>
+            </div>
+            <div class="content_nav">
+              <div class="container">
+                <div class="container-sub" style="width:65%;">
+                  <span>Ascentias Tech is not limited to web designing, but also offers quality work in different areas. A professional team to ensure top quality and timely output handles each service. We leverage advanced technology to deliver solutions that exceed expectations.</span>
+                </div>
+              </div>
+            </div>
+            <img src="/assets/bg/services2.png">
+          </div>
+        </div>
+      </div>
+      <div class="services-column services-column-two">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="vc_col-sm-8 our-services-list wpb_column column_container vc_column_container col padding-4-percent instance-3" data-using-bg="true" data-t-w-inherits="default" data-shadow="small_depth" data-border-radius="10px" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#ffffff" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+              <div class="column-bg-overlay"></div>
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                  <div class="iwithtext"> 
+                    <div class="iwt-icon">
+                      <img src="/assets/image/mobile-development.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded"> 
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/mobile-development">Mobile Development</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="iwithtext" >
+                    <div class="iwt-icon"> 
+                      <img src="/assets/image/web-development.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded">
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/web-development">Web Development</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+
+
+
+                  <div class="iwithtext"> 
+                    <div class="iwt-icon">
+                      <img src="/assets/image/website-maintenance.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded"> 
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/website-maintenance">website Maintenance</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="iwithtext" >
+                    <div class="iwt-icon"> 
+                      <img src="/assets/image/dedicated-hiring2.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded">
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/dedicated-hiring">Dedicated Hiring</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+
+
+                  <div class="iwithtext"> 
+                    <div class="iwt-icon">
+                      <img src="/assets/image/ui-ux-design.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded"> 
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/ui-ux-design">UI/UX Design</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="iwithtext" >
+                    <div class="iwt-icon"> 
+                      <img src="/assets/image/digital-marketing.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded">
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/digital-marketing">Digital Marketing</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+
+                  <div class="iwithtext"> 
+                    <div class="iwt-icon">
+                      <img src="/assets/image/database-development.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded"> 
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/database-development">Database Development</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="iwithtext" >
+                    <div class="iwt-icon"> 
+                      <img src="/assets/image/project-takeover.png" srcset="" alt="" sizes="(max-width: 1px) 100vw, 1px" class="lazyloaded" data-ll-status="loaded">
+                    </div>
+                    <div class="iwt-text"> 
+                      <a href="/project-takeover">Project Takeover</a> 
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
+<section>
+  <div class="digi_experts">
+
+<section class="box-section">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="services-column">
+
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="vc_col-sm-8 our-services-list wpb_column column_container vc_column_container col padding-4-percent instance-3" data-using-bg="true" data-t-w-inherits="default" data-shadow="small_depth" data-border-radius="10px" data-border-animation="" data-border-animation-delay="" data-border-width="none" data-border-style="solid" data-border-color="" data-bg-cover="" data-padding-pos="all" data-has-bg-color="true" data-bg-color="#ffffff" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+              <div class="column-bg-overlay"></div>
+              <div class="vc_column-inner">
+                <div class="wpb_wrapper">
+                  <div class="">
+                    <img style="position: absolute;left:10px;" src="/assets/bg/bg-blurb-general.svg">
+
+                    <div class="flex flex-wrap justify-center sm:grid sm:grid-cols-3 gap-6 xl:w-3/4 mx-auto relative z-10" style="width: 75%;grid-template-columns: repeat(3,minmax(0,1fr));display: grid;grid-gap: 1.5rem;gap: 1.5rem;z-index: 10;position: relative;margin-left: auto;margin-right: auto;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-ms-flex-wrap: wrap;flex-wrap: wrap;grid-template-columns: repeat(3,minmax(0,1fr));">
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/php-1.svg" alt="php"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">PHP</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/java-14.svg" alt="iOS icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">JAVA</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/python-5.svg" alt="Android icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Python</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/html5-2.svg" alt="Python icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Html</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/scala-4.svg" alt="Heroku icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Scala</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/rails-1.svg"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Ruby On Rails</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/angular-icon-1.svg" alt="Django icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Angular</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/logo-javascript.svg" alt="SQL &amp; NOSQL icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">javascript</span>
+                            </div>
+                        
+                            <div class="bg-white shadow flex flex-col justify-center items-center text-center p-4">
+                                <span class="tech-img-span"><img src="/assets/image/technologies/jquery-2.svg" alt="Serverless icon"></span>
+                                <span class="text-xs uppercase mt-4 text-opacity-60 text-black">Jquery</span>
+                            </div>
+                        
+                    </div>
+                </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services-column"  style="top:85px;">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="head_nav">
+              <div class="container" style="width:50%;">
+                <h1>Technologies</h1>
+              </div>
+            </div>
+            <div class="content_nav">
+              <div class="container">
+                <div class="container-sub" style="width:65%;">
+                  <span>Our expertise spans all major technologies and platforms, and advances to innovative technology trends.</span>
+                </div>
+              </div>
+            </div>
+            <img src="/assets/bg/technologies3.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+<section>
+  <div class="digi_experts">
+    <div class="head_nav">
+      <div class="container">
+        <h1>Digital Experts</h1>
+      </div>
+    </div>
+    <div class="content_nav">
+      <div class="container">
+        <div class="container-sub">
+          <span>We future-proof businesses through fast reengineering processes <br>that lead to scalable operations with maximum impact.</span>
+        </div>
+      </div>
+    </div>
+
+<section class="box-section">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="box-column">
+        <div class="box-column-wrap">
+          <div class="box-inner-wrap">
+            <div class="box-inner-content"(mouseover)="isHover=true" (mouseout)="isHover=false" >
+              <div class="box-container" [@hovercontent]="isHover ? 'hoverd' : 'unhoverd'"> 
+                <a href="#" class="box-cont-anchor" >
+                  <div class="box-anchor-bg-wrapper">
+                    <div class="box-anchor-bg-img bg-img1">
+                    </div>
+                    <div class="box-anchor-bg-img-overlay" [ngClass]="isHover ? 'set_background' : ''">
+                    </div>
+                  </div>
+                  <div class="box-content cont1">
+                    <h3 class="box-content-title"> Dedicated Team</h3>
+                    <div class="box-content-item"> An expert autonomous team capable of rapidly and efficiently delivering technology solutions and value.</div>
+                  </div> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-column">
+        <div class="box-column-wrap">
+          <div class="box-inner-wrap">
+            <div class="box-inner-content" (mouseover)="isHover2=true" (mouseout)="isHover2=false">
+              <div class="box-container" [@hovercontent2]="isHover2 ? 'hoverd2' : 'unhoverd2'"> 
+                <a href="#" class="box-cont-anchor">
+                  <div class="box-anchor-bg-wrapper">
+                    <div class="box-anchor-bg-img bg-img2">
+                    </div>
+                    <div class="box-anchor-bg-img-overlay" [ngClass]="isHover2 ? 'set_background' : ''">
+                    </div>
+                  </div>
+                  <div class="box-content cont2">
+                    <h3 class="box-content-title"> Staff Augmentation</h3>
+                    <div class="box-content-item"> The extra talent needed to boost your projects.&nbsp;Top 1% Engineers fully integrated with your team.</div>
+                  </div> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-column">
+        <div class="box-column-wrap">
+          <div class="box-inner-wrap">
+            <div class="box-inner-content" (mouseover)="isHover3=true" (mouseout)="isHover3=false">
+              <div class="box-container" [@hovercontent3]="isHover3 ? 'hoverd3' : 'unhoverd3'"> 
+                <a href="#" class="box-cont-anchor">
+                  <div class="box-anchor-bg-wrapper">
+                    <div class="box-anchor-bg-img bg-img3">
+                    </div>
+                    <div class="box-anchor-bg-img-overlay" [ngClass]="isHover3 ? 'set_background' : ''">
+                    </div>
+                  </div>
+                  <div class="box-content cont3">
+                    <h3 class="box-content-title"> Software Outsourcing</h3>
+                    <div class="box-content-item"> Full-cycle custom software development. You provide the specifications, we deliver the end-to-end solution.</div>
+                  </div> 
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+<section>
+  <div class="digi_experts">
+    
+    <div class="head_nav">
+      <div class="container">
+        <h1>How can Ascentias help</h1>
+      </div>
+    </div>
+    <div class="content_nav">
+      <div class="container">
+        <div class="container-sub">
+          <span>We listen to your ideas and create custom software solutions from the ground up, designed especially for your business. Ascentias customers agree that our engineers and executive team are some of the best in the world. You can trust that we'll do it right the first time.</span>
+        </div>
+      </div>
+    </div>
+
+<section class="box-section">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="services-column" style="width:100%;">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="page-section__block">
+              <div class="items-list items-list--four items-list--directions">
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/laptop-completely-blue.svg" alt="Custom Software Design and Development">
+                    </a>
+                    <a href="" class="item-title">Custom Software <br> Design and Development</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/mobile-completely-blue.svg" alt="Mobile Application Development">
+                    </a>
+                    <a href="" class="item-title">Mobile Application Development</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/cloud-completely-blue.svg" alt="Cloud Migration, Optimization and Management">
+                    </a>
+                    <a href="" class="item-title">Cloud Migration, Optimization and Management</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/thumb-up-completely-blue.svg" alt="Software Quality Assurance and Testing">
+                    </a>
+                    <a href="" class="item-title">Software Quality <br> Assurance and Testing</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/head-completely-blue.svg" alt="Digital Transformation">
+                    </a>
+                    <a href="" class="item-title">Digital Transformation</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/infinity-completely-blue.svg" alt="DevOps Services">
+                    </a>
+                    <a href="" class="item-title">DevOps Services</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/puzzle-completely-blue.svg" alt="Big Data and Analytics">
+                    </a>
+                    <a href="" class="item-title">Big Data and Analytics</a>
+                  </div>
+                </div>
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-heading">
+                      <img src="/assets/image/technologies/team-completely-blue.svg" alt="Software Maintenance and Support">
+                    </a>
+                    <a href="" class="item-title">Software Maintenance <br>and Support</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
+
+<section>
+  <div class="digi_experts">
+    
+    <div class="head_nav">
+      <div class="container">
+        <h1>Core Software Development Languages</h1>
+      </div>
+    </div>
+
+<section class="box-section" style="background-color: #373a43!important;">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="services-column" style="width:100%;">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+
+            <div class="page-section__block">
+              <div class="items-list items-list--four items-list--frameworks mb-12">
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/java-14.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">JAVA</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/php-1.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">PHP</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/python-5.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">PYTHON</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/ruby.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Ruby</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/ruby-2.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Rails</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/c-sharp.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">C#</div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="items-list items-list--four items-list--frameworks">
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/scala-4.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Scala</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/typescript.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Typescript</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/logo-javascript.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Javascript</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/angular-icon-1.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Angular</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/html5-2.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">HTML</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="items-list__item">
+                  <div class="items-list__item-inner">
+                    <a href="" class="item-link">
+                      <div class="item-header">
+                        <img src="/assets/image/technologies/laravel-2.svg" alt="JAVA">
+                      </div>
+                      <div class="item-title">Laravel</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
+<section>
+  <div class="digi_experts">
+    
+    <div class="" style="float: left;">
+      <div class="container">
+        <h1 style="color: #0048aa;font-weight: 800;font-size: 48px;">Contact Us</h1>
+        <h1>Whatever it may be, we are glad to hear from you!</h1>
+        <p>If you'd like to get in touch with us you can email us at <b>info@ascentiastech.com</b>, call us on <b>+91 973 114 9808</b>, send us a message via our online form.</p>
+      </div>
+    </div>
+
+<section class="box-section" style="bottom: 250px;">
+  <div class="box-container">
+    <div class="box-row">
+      <div class="services-column" style="width:100%;">
+        <div class="services-column-wrap">
+          <div class="services-inner-wrap">
+            <div class="relative">
+                <img src="https://d33wubrfki0l68.cloudfront.net/8bcd2fb5cd776ce264101c8e17548259975006a3/65b5a/assets/images/misc/contact-hero-circle.svg" class="absolute contactus-img-1 top-0 left-0 w-2/3 sm:w-1/3 md:w-auto ml-1/4 xxl:ml-1/3" alt="">
+                <img src="https://d33wubrfki0l68.cloudfront.net/d065ff2c77686910393dd3c347478aa6edcd6322/e25aa/assets/images/misc/contact-blurb.svg" class="absolute contactus-img-2 inset-y-0 left-0 w-4/5 sm:w-7/12 lg:w-1/2 mt-10" alt="">
+                <div class="py-16 md:py-24 container flex flex-col sm:flex-row items-center justify-between relative">
+                  <img src="https://d33wubrfki0l68.cloudfront.net/a319bc71e226670f87d0309d5d2b246446917f80/aa16e/assets/images/misc/contact-br-circles.svg" class="absolute contactus-img-3" alt="" style="z-index: -1;">
+                  <div class="contact-container">
+                    <div class="contact-container-box">
+                      <h2 class="tracking-tight">Let’s build something great.</h2>
+                      <div class="row success_msg"  *ngIf="showMsg">
+					        <div class="col-xs-12">
+					          	<p class="alert alert-success">
+					              	<strong>Thanks for Contacting Ascentias Tech!</strong> We will get Back to you soon!.
+								</p>
+					        </div>
+					    </div>
+                      <form [formGroup]="formGroup" (ngSubmit)="submitContact(formGroup.value, formDirective);" #formDirective="ngForm">
+                      <div class="contact-form-left-sec">
+                        <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-textfield webform-component--name"> 
+                              <label class="web-form-label" for="edit-submitted-name">Name <span class="form-required" title="This field is required.">*</span></label>
+                               <input required="required" type="text" class="form-control" formControlName="name" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required"  [ngClass]="{ 'is-invalid': submitted && fval.name.errors }">
+                                <div *ngIf="submitted && fval.name.errors" class="invalid-feedback">
+                                  <div *ngIf="fval.name.errors.required">
+                                  Name is required!
+                                  </div>
+                                </div>
+                             </div>
+                           </div>
+                         </div>
+                         <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box" style="float:right;top: 4px;">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-email webform-component--email"> 
+                              <label class="web-form-label" for="edit-submitted-email">Email <span class="form-required" title="This field is required.">*</span></label> 
+                              <input required="required" class="email form-text form-email required" type="email" class="form-control" formControlName="email" id="edit-submitted-email" name="submitted[email]" size="60" [ngClass]="{ 'is-invalid': submitted && fval.email.errors }">
+                              <div *ngIf="submitted && fval.email.errors" class="invalid-feedback">
+                                <div *ngIf="fval.email.errors.required">Email is required!</div>
+                                <div *ngIf="fval.email.errors.email">Enter a valid email address!</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box" style="float:none;">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-textfield webform-component--contact-number"> 
+                              <label class="web-form-label" for="edit-submitted-contact-number">Contact number <span class="form-required" title="This field is required.">*</span></label> 
+                              <input required="required" type="text" class="form-control" formControlName="contact_number" id="edit-submitted-contact-number" name="submitted[contact_number]" value="" size="60" maxlength="128" class="form-text required" [ngClass]="{ 'is-invalid': submitted && fval.contact_number.errors }">
+                              <div *ngIf="submitted && fval.contact_number.errors" class="invalid-feedback">
+                                <div *ngIf="fval.contact_number.errors.required">Contact Number is required!</div>
+                                <div *ngIf="fval.contact_number.errors.pattern">Enter a valid Contact Number!</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box" style="float:right;">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-textfield webform-component--organization"> <label class="web-form-label" for="edit-submitted-organization">ORGANIZATION / INSTITUTE </label> 
+                              <input type="text"class="form-control" formControlName="company" id="edit-submitted-organization" name="submitted[organization]" value="" size="60" maxlength="128" class="form-text">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box"  style="float:none;">
+                        <div class="control contact-input-box-control">
+                          <div class="form-group form-item webform-component webform-component-select webform-component--country"> 
+                            <label class="web-form-label" for="edit-submitted-country">Country </label> 
+                            <div class="SumoSelect sumo_submitted[country] contact-input-box-control-select" [ngClass]="country_select?'open' : ''" tabindex="0" role="button" aria-expanded="false">
+                              <select id="edit-submitted-country" name="submitted[country]" class="form-select SumoUnder" tabindex="-1">
+                                <option value="" selected="selected">Select</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="AX">Aland Islands</option>
+                                <option value="AL">Albania</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="AS">American Samoa</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AO">Angola</option>
+                                <option value="AI">Anguilla</option>
+                                <option value="AQ">Antarctica</option>
+                                <option value="AG">Antigua and Barbuda</option>
+                                <option value="AR">Argentina</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AW">Aruba</option>
+                                <option value="AU">Australia</option>
+                                <option value="AT">Austria</option>
+                                <option value="AZ">Azerbaijan</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="BH">Bahrain</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="BB">Barbados</option>
+                                <option value="BY">Belarus</option>
+                                <option value="BE">Belgium</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BJ">Benin</option>
+                                <option value="BM">Bermuda</option>
+                                <option value="BT">Bhutan</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="BW">Botswana</option>
+                                <option value="BV">Bouvet Island</option>
+                                <option value="BR">Brazil</option>
+                                <option value="IO">British Indian Ocean Territory</option>
+                                <option value="VG">British Virgin Islands</option>
+                                <option value="BN">Brunei</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="BI">Burundi</option>
+                                <option value="KH">Cambodia</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="CA">Canada</option>
+                                <option value="CV">Cape Verde</option>
+                                <option value="BQ">Caribbean Netherlands</option>
+                                <option value="KY">Cayman Islands</option>
+                                <option value="CF">Central African Republic</option>
+                                <option value="TD">Chad</option>
+                                <option value="CL">Chile</option>
+                                <option value="CN">China</option>
+                                <option value="CX">Christmas Island</option>
+                                <option value="CC">Cocos (Keeling) Islands</option>
+                                <option value="CO">Colombia</option>
+                                <option value="KM">Comoros</option>
+                                <option value="CG">Congo (Brazzaville)</option>
+                                <option value="CD">Congo (Kinshasa)</option>
+                                <option value="CK">Cook Islands</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="HR">Croatia</option>
+                                <option value="CU">Cuba</option>
+                                <option value="CW">Curaçao</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="DK">Denmark</option>
+                                <option value="DJ">Djibouti</option>
+                                <option value="DM">Dominica</option>
+                                <option value="DO">Dominican Republic</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="EG">Egypt</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="GQ">Equatorial Guinea</option>
+                                <option value="ER">Eritrea</option>
+                                <option value="EE">Estonia</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="FK">Falkland Islands</option>
+                                <option value="FO">Faroe Islands</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="FI">Finland</option>
+                                <option value="FR">France</option>
+                                <option value="GF">French Guiana</option>
+                                <option value="PF">French Polynesia</option>
+                                <option value="TF">French Southern Territories</option>
+                                <option value="GA">Gabon</option>
+                                <option value="GM">Gambia</option>
+                                <option value="GE">Georgia</option>
+                                <option value="DE">Germany</option>
+                                <option value="GH">Ghana</option>
+                                <option value="GI">Gibraltar</option>
+                                <option value="GR">Greece</option>
+                                <option value="GL">Greenland</option>
+                                <option value="GD">Grenada</option>
+                                <option value="GP">Guadeloupe</option>
+                                <option value="GU">Guam</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="GG">Guernsey</option>
+                                <option value="GN">Guinea</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="GY">Guyana</option>
+                                <option value="HT">Haiti</option>
+                                <option value="HM">Heard Island and McDonald Islands</option>
+                                <option value="HN">Honduras</option>
+                                <option value="HK">Hong Kong S.A.R., China</option>
+                                <option value="HU">Hungary</option>
+                                <option value="IS">Iceland</option>
+                                <option value="IN">India</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="IR">Iran</option>
+                                <option value="IQ">Iraq</option>
+                                <option value="IE">Ireland</option>
+                                <option value="IM">Isle of Man</option>
+                                <option value="IL">Israel</option>
+                                <option value="IT">Italy</option>
+                                <option value="CI">Ivory Coast</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="JP">Japan</option>
+                                <option value="JE">Jersey</option>
+                                <option value="JO">Jordan</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="KE">Kenya</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="KG">Kyrgyzstan</option>
+                                <option value="LA">Laos</option>
+                                <option value="LV">Latvia</option>
+                                <option value="LB">Lebanon</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="LR">Liberia</option>
+                                <option value="LY">Libya</option>
+                                <option value="LI">Liechtenstein</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="MO">Macao S.A.R., China</option>
+                                <option value="MK">Macedonia</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MW">Malawi</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="MV">Maldives</option>
+                                <option value="ML">Mali</option>
+                                <option value="MT">Malta</option>
+                                <option value="MH">Marshall Islands</option>
+                                <option value="MQ">Martinique</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="YT">Mayotte</option>
+                                <option value="MX">Mexico</option>
+                                <option value="FM">Micronesia</option>
+                                <option value="MD">Moldova</option>
+                                <option value="MC">Monaco</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="MS">Montserrat</option>
+                                <option value="MA">Morocco</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="NA">Namibia</option>
+                                <option value="NR">Nauru</option>
+                                <option value="NP">Nepal</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="AN">Netherlands Antilles</option>
+                                <option value="NC">New Caledonia</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="NE">Niger</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="NU">Niue</option>
+                                <option value="NF">Norfolk Island</option>
+                                <option value="MP">Northern Mariana Islands</option>
+                                <option value="KP">North Korea</option>
+                                <option value="NO">Norway</option>
+                                <option value="OM">Oman</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="PW">Palau</option>
+                                <option value="PS">Palestinian Territory</option>
+                                <option value="PA">Panama</option>
+                                <option value="PG">Papua New Guinea</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Peru</option>
+                                <option value="PH">Philippines</option>
+                                <option value="PN">Pitcairn</option>
+                                <option value="PL">Poland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PR">Puerto Rico</option>
+                                <option value="QA">Qatar</option>
+                                <option value="RE">Reunion</option>
+                                <option value="RO">Romania</option>
+                                <option value="RU">Russia</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="BL">Saint Barthélemy</option>
+                                <option value="SH">Saint Helena</option>
+                                <option value="KN">Saint Kitts and Nevis</option>
+                                <option value="LC">Saint Lucia</option>
+                                <option value="MF">Saint Martin (French part)</option>
+                                <option value="PM">Saint Pierre and Miquelon</option>
+                                <option value="VC">Saint Vincent and the Grenadines</option>
+                                <option value="WS">Samoa</option>
+                                <option value="SM">San Marino</option>
+                                <option value="ST">Sao Tome and Principe</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="SN">Senegal</option>
+                                <option value="RS">Serbia</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="SG">Singapore</option>
+                                <option value="SX">Sint Maarten</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="SB">Solomon Islands</option>
+                                <option value="SO">Somalia</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                <option value="KR">South Korea</option>
+                                <option value="SS">South Sudan</option>
+                                <option value="ES">Spain</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="SD">Sudan</option>
+                                <option value="SR">Suriname</option>
+                                <option value="SJ">Svalbard and Jan Mayen</option>
+                                <option value="SZ">Swaziland</option>
+                                <option value="SE">Sweden</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="SY">Syria</option>
+                                <option value="TW">Taiwan</option>
+                                <option value="TJ">Tajikistan</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="TH">Thailand</option>
+                                <option value="TL">Timor-Leste</option>
+                                <option value="TG">Togo</option>
+                                <option value="TK">Tokelau</option>
+                                <option value="TO">Tonga</option>
+                                <option value="TT">Trinidad and Tobago</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="TR">Turkey</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="TC">Turks and Caicos Islands</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="VI">U.S. Virgin Islands</option>
+                                <option value="UG">Uganda</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="US">United States</option>
+                                <option value="UM">United States Minor Outlying Islands</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VA">Vatican</option>
+                                <option value="VE">Venezuela</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="WF">Wallis and Futuna</option>
+                                <option value="EH">Western Sahara</option>
+                                <option value="YE">Yemen</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="ZW">Zimbabwe</option>
+                              </select>
+                              <p class="CaptionCont SelectBox" title=" Select" (click)="country_select=!country_select">
+                                <span> {{country_element}}</span>
+                                <label><i></i></label>
+                                <input type="hidden" class="form-control" formControlName="country" name="country" value="{{country_elementinput}}">
+                              </p>
+                              <div (blur)="country_select=false" tabindex="-1"  class="optWrapper" [ngStyle]="country_select?{'display': 'block'} : {'display': 'none'}">
+                                <ul class="options" (click)="countryonClick($event)">
+                                  <li class="opt selected"><label>Select</label></li>
+                                  <li class="opt"><label>Afghanistan</label></li>
+                                  <li class="opt"><label>Aland Islands</label></li>
+                                  <li class="opt"><label>Albania</label></li>
+                                  <li class="opt"><label>Algeria</label></li>
+                                  <li class="opt"><label>American Samoa</label></li>
+                                  <li class="opt"><label>Andorra</label></li>
+                                  <li class="opt"><label>Angola</label></li>
+                                  <li class="opt"><label>Anguilla</label></li>
+                                  <li class="opt"><label>Antarctica</label></li>
+                                  <li class="opt"><label>Antigua and Barbuda</label></li>
+                                  <li class="opt"><label>Argentina</label></li>
+                                  <li class="opt"><label>Armenia</label></li>
+                                  <li class="opt"><label>Aruba</label></li>
+                                  <li class="opt"><label>Australia</label></li>
+                                  <li class="opt"><label>Austria</label></li>
+                                  <li class="opt"><label>Azerbaijan</label></li>
+                                  <li class="opt"><label>Bahamas</label></li>
+                                  <li class="opt"><label>Bahrain</label></li>
+                                  <li class="opt"><label>Bangladesh</label></li>
+                                  <li class="opt"><label>Barbados</label></li>
+                                  <li class="opt"><label>Belarus</label></li>
+                                  <li class="opt"><label>Belgium</label></li>
+                                  <li class="opt"><label>Belize</label></li>
+                                  <li class="opt"><label>Benin</label></li>
+                                  <li class="opt"><label>Bermuda</label></li>
+                                  <li class="opt"><label>Bhutan</label></li>
+                                  <li class="opt"><label>Bolivia</label></li>
+                                  <li class="opt"><label>Bosnia and Herzegovina</label></li>
+                                  <li class="opt"><label>Botswana</label></li>
+                                  <li class="opt"><label>Bouvet Island</label></li>
+                                  <li class="opt"><label>Brazil</label></li>
+                                  <li class="opt"><label>British Indian Ocean Territory</label></li>
+                                  <li class="opt"><label>British Virgin Islands</label></li>
+                                  <li class="opt"><label>Brunei</label></li>
+                                  <li class="opt"><label>Bulgaria</label></li>
+                                  <li class="opt"><label>Burkina Faso</label></li>
+                                  <li class="opt"><label>Burundi</label></li>
+                                  <li class="opt"><label>Cambodia</label></li>
+                                  <li class="opt"><label>Cameroon</label></li>
+                                  <li class="opt"><label>Canada</label></li>
+                                  <li class="opt"><label>Cape Verde</label></li>
+                                  <li class="opt"><label>Caribbean Netherlands</label></li>
+                                  <li class="opt"><label>Cayman Islands</label></li>
+                                  <li class="opt"><label>Central African Republic</label></li>
+                                  <li class="opt"><label>Chad</label></li>
+                                  <li class="opt"><label>Chile</label></li>
+                                  <li class="opt"><label>China</label></li>
+                                  <li class="opt"><label>Christmas Island</label></li>
+                                  <li class="opt"><label>Cocos (Keeling) Islands</label></li>
+                                  <li class="opt"><label>Colombia</label></li>
+                                  <li class="opt"><label>Comoros</label></li>
+                                  <li class="opt"><label>Congo (Brazzaville)</label></li>
+                                  <li class="opt"><label>Congo (Kinshasa)</label></li>
+                                  <li class="opt"><label>Cook Islands</label></li>
+                                  <li class="opt"><label>Costa Rica</label></li>
+                                  <li class="opt"><label>Croatia</label></li>
+                                  <li class="opt"><label>Cuba</label></li>
+                                  <li class="opt"><label>Curaçao</label></li>
+                                  <li class="opt"><label>Cyprus</label></li>
+                                  <li class="opt"><label>Czech Republic</label></li>
+                                  <li class="opt"><label>Denmark</label></li>
+                                  <li class="opt"><label>Djibouti</label></li>
+                                  <li class="opt"><label>Dominica</label></li>
+                                  <li class="opt"><label>Dominican Republic</label></li>
+                                  <li class="opt"><label>Ecuador</label></li>
+                                  <li class="opt"><label>Egypt</label></li>
+                                  <li class="opt"><label>El Salvador</label></li>
+                                  <li class="opt"><label>Equatorial Guinea</label></li>
+                                  <li class="opt"><label>Eritrea</label></li>
+                                  <li class="opt"><label>Estonia</label></li>
+                                  <li class="opt"><label>Ethiopia</label></li>
+                                  <li class="opt"><label>Falkland Islands</label></li>
+                                  <li class="opt"><label>Faroe Islands</label></li>
+                                  <li class="opt"><label>Fiji</label></li>
+                                  <li class="opt"><label>Finland</label></li>
+                                  <li class="opt"><label>France</label></li>
+                                  <li class="opt"><label>French Guiana</label></li>
+                                  <li class="opt"><label>French Polynesia</label></li>
+                                  <li class="opt"><label>French Southern Territories</label></li>
+                                  <li class="opt"><label>Gabon</label></li>
+                                  <li class="opt"><label>Gambia</label></li>
+                                  <li class="opt"><label>Georgia</label></li>
+                                  <li class="opt"><label>Germany</label></li>
+                                  <li class="opt"><label>Ghana</label></li>
+                                  <li class="opt"><label>Gibraltar</label></li>
+                                  <li class="opt"><label>Greece</label></li>
+                                  <li class="opt"><label>Greenland</label></li>
+                                  <li class="opt"><label>Grenada</label></li>
+                                  <li class="opt"><label>Guadeloupe</label></li>
+                                  <li class="opt"><label>Guam</label></li>
+                                  <li class="opt"><label>Guatemala</label></li>
+                                  <li class="opt"><label>Guernsey</label></li>
+                                  <li class="opt"><label>Guinea</label></li>
+                                  <li class="opt"><label>Guinea-Bissau</label></li>
+                                  <li class="opt"><label>Guyana</label></li>
+                                  <li class="opt"><label>Haiti</label></li>
+                                  <li class="opt"><label>Heard Island and McDonald Islands</label></li>
+                                  <li class="opt"><label>Honduras</label></li>
+                                  <li class="opt"><label>Hong Kong S.A.R., China</label></li>
+                                  <li class="opt"><label>Hungary</label></li>
+                                  <li class="opt"><label>Iceland</label></li>
+                                  <li class="opt"><label>India</label></li>
+                                  <li class="opt"><label>Indonesia</label></li>
+                                  <li class="opt"><label>Iran</label></li>
+                                  <li class="opt"><label>Iraq</label></li>
+                                  <li class="opt"><label>Ireland</label></li>
+                                  <li class="opt"><label>Isle of Man</label></li>
+                                  <li class="opt"><label>Israel</label></li>
+                                  <li class="opt"><label>Italy</label></li>
+                                  <li class="opt"><label>Ivory Coast</label></li>
+                                  <li class="opt"><label>Jamaica</label></li>
+                                  <li class="opt"><label>Japan</label></li>
+                                  <li class="opt"><label>Jersey</label></li>
+                                  <li class="opt"><label>Jordan</label></li>
+                                  <li class="opt"><label>Kazakhstan</label></li>
+                                  <li class="opt"><label>Kenya</label></li>
+                                  <li class="opt"><label>Kiribati</label></li>
+                                  <li class="opt"><label>Kuwait</label></li>
+                                  <li class="opt"><label>Kyrgyzstan</label></li>
+                                  <li class="opt"><label>Laos</label></li>
+                                  <li class="opt"><label>Latvia</label></li>
+                                  <li class="opt"><label>Lebanon</label></li>
+                                  <li class="opt"><label>Lesotho</label></li>
+                                  <li class="opt"><label>Liberia</label></li>
+                                  <li class="opt"><label>Libya</label></li>
+                                  <li class="opt"><label>Liechtenstein</label></li>
+                                  <li class="opt"><label>Lithuania</label></li>
+                                  <li class="opt"><label>Luxembourg</label></li>
+                                  <li class="opt"><label>Macao S.A.R., China</label></li>
+                                  <li class="opt"><label>Macedonia</label></li>
+                                  <li class="opt"><label>Madagascar</label></li>
+                                  <li class="opt"><label>Malawi</label></li>
+                                  <li class="opt"><label>Malaysia</label></li>
+                                  <li class="opt"><label>Maldives</label></li>
+                                  <li class="opt"><label>Mali</label></li>
+                                  <li class="opt"><label>Malta</label></li>
+                                  <li class="opt"><label>Marshall Islands</label></li>
+                                  <li class="opt"><label>Martinique</label></li>
+                                  <li class="opt"><label>Mauritania</label></li>
+                                  <li class="opt"><label>Mauritius</label></li>
+                                  <li class="opt"><label>Mayotte</label></li>
+                                  <li class="opt"><label>Mexico</label></li>
+                                  <li class="opt"><label>Micronesia</label></li>
+                                  <li class="opt"><label>Moldova</label></li>
+                                  <li class="opt"><label>Monaco</label></li>
+                                  <li class="opt"><label>Mongolia</label></li>
+                                  <li class="opt"><label>Montenegro</label></li>
+                                  <li class="opt"><label>Montserrat</label></li>
+                                  <li class="opt"><label>Morocco</label></li>
+                                  <li class="opt"><label>Mozambique</label></li>
+                                  <li class="opt"><label>Myanmar</label></li>
+                                  <li class="opt"><label>Namibia</label></li>
+                                  <li class="opt"><label>Nauru</label></li>
+                                  <li class="opt"><label>Nepal</label></li>
+                                  <li class="opt"><label>Netherlands</label></li>
+                                  <li class="opt"><label>Netherlands Antilles</label></li>
+                                  <li class="opt"><label>New Caledonia</label></li>
+                                  <li class="opt"><label>New Zealand</label></li>
+                                  <li class="opt"><label>Nicaragua</label></li>
+                                  <li class="opt"><label>Niger</label></li>
+                                  <li class="opt"><label>Nigeria</label></li>
+                                  <li class="opt"><label>Niue</label></li>
+                                  <li class="opt"><label>Norfolk Island</label></li>
+                                  <li class="opt"><label>Northern Mariana Islands</label></li>
+                                  <li class="opt"><label>North Korea</label></li>
+                                  <li class="opt"><label>Norway</label></li>
+                                  <li class="opt"><label>Oman</label></li>
+                                  <li class="opt"><label>Pakistan</label></li>
+                                  <li class="opt"><label>Palau</label></li>
+                                  <li class="opt"><label>Palestinian Territory</label></li>
+                                  <li class="opt"><label>Panama</label></li>
+                                  <li class="opt"><label>Papua New Guinea</label></li>
+                                  <li class="opt"><label>Paraguay</label></li>
+                                  <li class="opt"><label>Peru</label></li>
+                                  <li class="opt"><label>Philippines</label></li>
+                                  <li class="opt"><label>Pitcairn</label></li>
+                                  <li class="opt"><label>Poland</label></li>
+                                  <li class="opt"><label>Portugal</label></li>
+                                  <li class="opt"><label>Puerto Rico</label></li>
+                                  <li class="opt"><label>Qatar</label></li>
+                                  <li class="opt"><label>Reunion</label></li>
+                                  <li class="opt"><label>Romania</label></li>
+                                  <li class="opt"><label>Russia</label></li>
+                                  <li class="opt"><label>Rwanda</label></li>
+                                  <li class="opt"><label>Saint Barthélemy</label></li>
+                                  <li class="opt"><label>Saint Helena</label></li>
+                                  <li class="opt"><label>Saint Kitts and Nevis</label></li>
+                                  <li class="opt"><label>Saint Lucia</label></li>
+                                  <li class="opt"><label>Saint Martin (French part)</label></li>
+                                  <li class="opt"><label>Saint Pierre and Miquelon</label></li>
+                                  <li class="opt"><label>Saint Vincent and the Grenadines</label></li>
+                                  <li class="opt"><label>Samoa</label></li>
+                                  <li class="opt"><label>San Marino</label></li>
+                                  <li class="opt"><label>Sao Tome and Principe</label></li>
+                                  <li class="opt"><label>Saudi Arabia</label></li>
+                                  <li class="opt"><label>Senegal</label></li>
+                                  <li class="opt"><label>Serbia</label></li>
+                                  <li class="opt"><label>Seychelles</label></li>
+                                  <li class="opt"><label>Sierra Leone</label></li>
+                                  <li class="opt"><label>Singapore</label></li>
+                                  <li class="opt"><label>Sint Maarten</label></li>
+                                  <li class="opt"><label>Slovakia</label></li>
+                                  <li class="opt"><label>Slovenia</label></li>
+                                  <li class="opt"><label>Solomon Islands</label></li>
+                                  <li class="opt"><label>Somalia</label></li>
+                                  <li class="opt"><label>South Africa</label></li>
+                                  <li class="opt"><label>South Georgia and the South Sandwich Islands</label></li>
+                                  <li class="opt"><label>South Korea</label></li>
+                                  <li class="opt"><label>South Sudan</label></li>
+                                  <li class="opt"><label>Spain</label></li>
+                                  <li class="opt"><label>Sri Lanka</label></li>
+                                  <li class="opt"><label>Sudan</label></li>
+                                  <li class="opt"><label>Suriname</label></li>
+                                  <li class="opt"><label>Svalbard and Jan Mayen</label></li>
+                                  <li class="opt"><label>Swaziland</label></li>
+                                  <li class="opt"><label>Sweden</label></li>
+                                  <li class="opt"><label>Switzerland</label></li>
+                                  <li class="opt"><label>Syria</label></li>
+                                  <li class="opt"><label>Taiwan</label></li>
+                                  <li class="opt"><label>Tajikistan</label></li>
+                                  <li class="opt"><label>Tanzania</label></li>
+                                  <li class="opt"><label>Thailand</label></li>
+                                  <li class="opt"><label>Timor-Leste</label></li>
+                                  <li class="opt"><label>Togo</label></li>
+                                  <li class="opt"><label>Tokelau</label></li>
+                                  <li class="opt"><label>Tonga</label></li>
+                                  <li class="opt"><label>Trinidad and Tobago</label></li>
+                                  <li class="opt"><label>Tunisia</label></li>
+                                  <li class="opt"><label>Turkey</label></li>
+                                  <li class="opt"><label>Turkmenistan</label></li>
+                                  <li class="opt"><label>Turks and Caicos Islands</label></li>
+                                  <li class="opt"><label>Tuvalu</label></li>
+                                  <li class="opt"><label>U.S. Virgin Islands</label></li>
+                                  <li class="opt"><label>Uganda</label></li>
+                                  <li class="opt"><label>Ukraine</label></li>
+                                  <li class="opt"><label>United Arab Emirates</label></li>
+                                  <li class="opt"><label>United Kingdom</label></li>
+                                  <li class="opt"><label>United States</label></li>
+                                  <li class="opt"><label>United States Minor Outlying Islands</label></li>
+                                  <li class="opt"><label>Uruguay</label></li>
+                                  <li class="opt"><label>Uzbekistan</label></li>
+                                  <li class="opt"><label>Vanuatu</label></li>
+                                  <li class="opt"><label>Vatican</label></li>
+                                  <li class="opt"><label>Venezuela</label></li>
+                                  <li class="opt"><label>Vietnam</label></li>
+                                  <li class="opt"><label>Wallis and Futuna</label></li>
+                                  <li class="opt"><label>Western Sahara</label></li>
+                                  <li class="opt"><label>Yemen</label></li>
+                                  <li class="opt"><label>Zambia</label></li>
+                                  <li class="opt"><label>Zimbabwe</label></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-large-6 col-medium-6 col-small-12 conditional_services contact-input-box" style="float:right;">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-select webform-component--services"> 
+                              <label class="web-form-label" for="edit-submitted-services">Services </label> 
+                              <div class="SumoSelect sumo_submitted[services]" [ngClass]="service_select?'open' : ''" tabindex="0" role="button" aria-expanded="true">
+                                <select multiple="multiple" name="submitted[services][]" id="edit-submitted-services" size="4" class="form-select SumoUnder" tabindex="-1">
+                                  <option value="Mobile Application">Mobile Application</option>
+                                  <option value="Web Development">Web Development</option>
+                                  <option value="Cloud Computing">Cloud Computing</option>
+                                  <option value="QA &amp; Testing">QA &amp; Testing</option>
+                                  <option value="Internet of Things(IoT)">Internet of Things(IoT)</option>
+                                  <option value="Analytics and Big Data">Analytics and Big Data</option>
+                                  <option value="UX / UI Design">UX / UI Design</option>
+                                  <option value="Internet Marketing">Internet Marketing</option>
+                                  <option value="Software Consuting">Software Consuting</option>
+                                  <option value="END-TO-END Product Engineering">END-TO-END Product Engineering</option>
+                                  <option value="Enterprise Digital Transformation">Enterprise Digital Transformation</option>
+                                  <option value="Team Augmentation">Team Augmentation</option><option value="AI &amp; ML">AI &amp; ML</option>
+                                  <option value="Blockchain">Blockchain</option>
+                                  <option value="DevOps">DevOps</option>
+                                  <option value="SAP">SAP</option>
+                                </select>
+                                <p class="CaptionCont SelectBox" title="Select Here" (click)="service_select=!service_select">
+                                  <span class="placeholder"  *ngIf="selectedItemsList?.length == 0">Select Here</span>
+                                  <span class="placeholder"  *ngIf="selectedItemsList?.length < 3"><label style="margin-bottom: 0;" *ngFor="let item of selectedItemsList">{{item.label}}</label></span>
+                                  <span class="placeholder"  *ngIf="selectedItemsList?.length > 2"><label style="margin-bottom: 0;" >{{selectedItemsList.length}} Selected</label></span>
+                                  <label><i></i></label>
+                                </p>
+                                <div class="optWrapper multiple contact-input-box-control-select" [ngStyle]="service_select?{'display': 'block'} : {'display': 'none'}">
+                                  <ul class="options checkbox-items">
+                                    <li class="opt" *ngFor="let item of checkboxesDataList">
+                                      <input type="checkbox" name="" [ngModelOptions]="{standalone: true}" [(ngModel)]="item.isChecked" (change)="changeSelection()">
+                                      <label>{{item.label}}</label>
+                                    </li>
+                                    <!--<li class="opt">
+                                      <input type="checkbox" name="services" value="Web Development">
+                                      <label>Web Development</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Cloud Computing">
+                                      <label>Cloud Computing</label></li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="QA & Testing">
+                                      <label>QA & Testing</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Internet of Things(IoT)">
+                                      <label>Internet of Things(IoT)</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Analytics and Big Data">
+                                      <label>Analytics and Big Data</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="UX / UI Design">
+                                      <label>UX / UI Design</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Internet Marketing">
+                                      <label>Internet Marketing</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Software Consuting">
+                                      <label>Software Consuting</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="END-TO-END Product Engineering">
+                                      <label>END-TO-END Product Engineering</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Enterprise Digital Transformation">
+                                      <label>Enterprise Digital Transformation</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Team Augmentation">
+                                      <label>Team Augmentation</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="AI & ML">
+                                      <label>AI & ML</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="Blockchain">
+                                      <label>Blockchain</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="DevOps">
+                                      <label>DevOps</label>
+                                    </li>
+                                    <li class="opt">
+                                      <input type="checkbox" name="services" value="SAP">
+                                      <label>SAP</label>
+                                    </li>-->
+                                  </ul>
+                                  <input type="hidden" name="services_selected_count" value="{{service_elementinput_count}}">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col col-large-12 col-medium-12 col-small-12 contact-input-box" style="width: 100%;">
+                          <div class="control contact-input-box-control">
+                            <div class="form-group form-item webform-component webform-component-textarea webform-component--message"> 
+                              <label class="web-form-label" for="edit-submitted-message">HOW CAN WE HELP YOU? <span class="form-required" title="This field is required.">*</span></label>
+                              <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+                                <textarea required="required" class="form-control" formControlName="comments" id="edit-submitted-message" name="submitted[message]" cols="60" rows="2" class="form-textarea required"  [ngClass]="{ 'is-invalid': submitted && fval.comments.errors }" ></textarea>
+                                <div *ngIf="submitted && fval.comments.errors" class="invalid-feedback">
+                                  <div *ngIf="fval.comments.errors.required">How can we help you?</div>
+                                </div>
+                                <div class="grippie"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-item webform-component webform-component-hidden webform-component--flag" style="display: none"> 
+                          <input type="hidden" name="submitted[flag]" value="0">
+                        </div>
+                        <div class="form-item webform-component webform-component-hidden webform-component--county-name" style="display: none"> 
+                          <input type="hidden" name="submitted[county_name]" value="">
+                        </div>
+                        <input type="hidden" name="details[sid]">
+                          <input type="hidden" name="details[page_num]" value="1">
+                          <input type="hidden" name="details[page_count]" value="1">
+                          <input type="hidden" name="details[finished]" value="0">
+                          <input type="hidden" name="form_build_id" value="form-dEzopUE0s4WZZxLoUQIgwaPoeBwmlNPBjzBGsHeXWGM">
+                          <input type="hidden" name="form_id" value="webform_client_form_59">
+                          <div class="form-actions">
+                            <div class="col col-large-6 col-medium-6 col-small-12">
+                              <div class="control contact-input-box-control">
+                                <!--<div id="google_recaptcha_webform_client_form_59">
+                                  <div style="width: 304px; height: 78px;">
+                                    <div>
+                                      <iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Ld9pDUUAAAAAHYuotfouYWwHhz5Pj6BLLiktWBk&amp;co=aHR0cHM6Ly93d3cubmVvc29mdHRlY2guY29tOjQ0Mw..&amp;hl=en&amp;v=vzAt61JclNZYHl6fEWIBqLbe&amp;theme=dark&amp;size=normal&amp;cb=thtro66onerx" width="304" height="78" role="presentation" name="a-e2g5gpakehsg" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                    </div>
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                  </div>
+                                  <iframe style="display: none;"></iframe>
+                                </div>-->
+                              </div>
+                            </div>
+                            <div class="col col-large-6 col-medium-6 col-small-12 contact-input-box" style="bottom: 100px;float: right;">
+                              <div class="contact-us-59 control contact-input-box-control">
+                                <input class="webform-submit button-primary form-submit" type="submit" name="op" value="submit" style="background: #0048aa;color: white;border: 2px solid #0048aa;border-radius: 4px;float: right;">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="display:none;">
+                          <div class="mt-4">
+                              <div class="block invisible" id="form-success">
+                                  <p class="text-sm mb-4 font-light font-body text-black">Thank you for contacting us! We will be in touch with you shortly.</p>
+                              </div>
+                              <div class="block invisible" id="form-error">
+                                  <p class="text-sm mb-4 font-light font-body">There was an issue submitting your request.  <a href="email:contact@clearsummit.com">Please email us directly</a></p>
+                              </div>
+                          </div>
+                          <div class="mt-14">
+                              <span class="font-light block text-grey-dark">or call</span>
+                              <a href="tel:(323) 940-3353" class="text-primary font-medium"></a>
+                          </div>
+                        </div>
+                        <div class="contact-form-right-sec">
+                          <h3>Contact Us</h3>
+                          <ul class="letstalk-contacts" style="list-style: none;"> 
+                            <li><span class="contact-item-label"><i class="fas fa-map-marker-alt"></i>&nbsp;Address Here</span></li>
+                            <li><span class="contact-item-label">&nbsp;&nbsp;&nbsp;&nbsp;Address Here</span></li>
+                            <li><span class="contact-item-label">&nbsp;&nbsp;&nbsp;&nbsp;Address Here</span></li>
+                            <li><span class="contact-item-label"><i class="fas fa-phone-alt">&nbsp;+91 973 114 9808</i></span></li>
+                            <li><span class="contact-item-label"><i class="far fa-envelope">&nbsp;info@ascentiastech.com</i></span></li>
+                          </ul> 
+                        </div>
+
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+</section>
+
