@@ -79,6 +79,9 @@ export class HomeComponent implements OnInit {
   formGroup;
   submitted = false;
   showMsg = false;
+  isHover = false;
+  isHover2 = false;
+  isHover3 = false;
   @ViewChild(FormGroupDirective, {static: false}) formDirective: FormGroupDirective;
   @ViewChild('stickyMenu', {static:false}) menuElement: ElementRef;
 
@@ -111,7 +114,7 @@ export class HomeComponent implements OnInit {
   get fval() {
     return this.formGroup.controls;
   }
-  private submitContact(FormData: any, formDirective: FormGroupDirective) : void {
+  submitContact(FormData: any, formDirective: FormGroupDirective) : void {
     this.submitted = true;
     if (this.formGroup.invalid) {
       return;

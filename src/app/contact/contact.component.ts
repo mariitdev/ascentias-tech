@@ -43,7 +43,7 @@ export class ContactComponent implements OnInit {
   get fval() {
     return this.formGroup.controls;
   }
-  private submitContact(FormData: any, formDirective: FormGroupDirective) : void {
+  submitContact(FormData: any, formDirective: FormGroupDirective) : void {
     this.submitted = true;
     if (this.formGroup.invalid) {
       return;
